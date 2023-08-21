@@ -20,20 +20,20 @@ export default function Footer(props) {
            // It helps us to grow & continue our work. Thank you.
           // OR Purchase PRO version for commercial license.  */}
           <a
-            href="https://web3templates.com/?ref=stablo-template"
+            href="https://m-texx.com/"
             rel="noopener"
             target="_blank">
-            Web3Templates
+            M-Texx Textile Recycling
           </a>
         </span>
         <span>&middot;</span>
         <span>
           {" "}
           <a
-            href="https://github.com/web3templates/stablo"
+            href="https://m-texx.com/"
             rel="noopener"
             target="_blank">
-            Github
+            Website
           </a>
         </span>
       </div>

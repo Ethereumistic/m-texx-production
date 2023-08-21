@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
-import Locations from "./locations/page";
 
 export default function Post({ posts }) {
   return (
@@ -32,8 +31,7 @@ export default function Post({ posts }) {
           </div>
         </Container>
       )} */}
-
-      <Locations />
+      <div className="text-center text-4xl">САМО ЛОКАЦИИТЕ РАБОТЯТ</div>
     </>
   );
 }
