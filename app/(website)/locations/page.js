@@ -10,6 +10,9 @@ import MarkerClusterGroup from 'react-leaflet-cluster';
 import Backlink from '@/components/Backlink';
 import PhoneMap from '@/components/PhoneMap';
 
+import { useRouter } from 'next/navigation';
+
+
 
 function LocationMap({ selectedLocation }) {
 
@@ -133,16 +136,23 @@ const Locations = () => {
     //   }
     // };
 
+    // const handleLocationClick = (location) => {
+    //     setSelectedLocation(location);
+    //   };
+    
+    //   useEffect(() => {
+    //     if (selectedLocation) {
+    //       // Ensure this code runs only on the client-side
+    //       window.scrollTo({ top: 0, behavior: 'smooth' });
+    //     }
+    //   }, [selectedLocation]);
+
+    const router = useRouter();
     const handleLocationClick = (location) => {
+        // Use router to navigate to the top of the page
+        router.push('#top');
         setSelectedLocation(location);
       };
-    
-      useEffect(() => {
-        if (selectedLocation) {
-          // Ensure this code runs only on the client-side
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }, [selectedLocation]);
     
   
     const uniqueCityNames = [...new Set(markers.map((marker) => marker.city))];
@@ -150,7 +160,7 @@ const Locations = () => {
 
 
   return (
-    <div className='overflow-x-hidden overflow-y-visible relative '>
+    <div id="top" className='overflow-x-hidden overflow-y-visible relative '>
 
 
 
