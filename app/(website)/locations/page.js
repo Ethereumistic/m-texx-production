@@ -120,18 +120,30 @@ const Locations = () => {
       }
     };
   
+    // const handleLocationClick = (location) => {
+    //   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    //   setSelectedLocation(location);
+    //   const marker = markers.find((marker) => marker.popUp === location);
+    //   if (marker) {
+    //     const [lat, lng] = marker.geocode;
+
+
+    //     // map.setView([lat, lng], 14); // Adjust zoom level as needed
+    //   }
+    // };
+
     const handleLocationClick = (location) => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      setSelectedLocation(location);
-      const marker = markers.find((marker) => marker.popUp === location);
-      if (marker) {
-        const [lat, lng] = marker.geocode;
-
-
-        // map.setView([lat, lng], 14); // Adjust zoom level as needed
-      }
-    };
+        setSelectedLocation(location);
+      };
+    
+      useEffect(() => {
+        if (selectedLocation) {
+          // Ensure this code runs only on the client-side
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, [selectedLocation]);
+    
   
     const uniqueCityNames = [...new Set(markers.map((marker) => marker.city))];
 
