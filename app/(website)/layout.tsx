@@ -52,7 +52,7 @@ export default async function Layout({ children, params }) {
     <>
       <Navbar {...settings} />
 
-      <div>{children}</div>
+      <div className="mt-36">{children}</div>
 
       <Footer {...settings} />
     </>
