@@ -96,7 +96,7 @@ export default function Navbar(props) {
   
 
   return (
-<div className="fixed top-0 mb-8 z-40 sm:z-50 w-full box-content bg-white dark:bg-gray-800 shadow">
+<div className="fixed top-0 z-40 sm:z-50 w-full box-content bg-white dark:bg-gray-800 shadow">
   <Container className="-mt-2">
     <nav>
         <Disclosure>

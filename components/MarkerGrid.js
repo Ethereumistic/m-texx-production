@@ -68,10 +68,8 @@ const MarkerGrid = ({ markers }) => {
       </div>
     <div className="border p-4 mx-auto sm:w-2/4 z-20 sm:mt-0 mt-[820px]">
     <CitySearchBox cities={Object.keys(groupedMarkers)} onCitySearch={handleCitySearch} />
-      {Object.keys(groupedMarkers).map((city, index) => (
-        <div key={index}
-             className="border p-4 mb-4"
-             ref={(el) => (cityRefs[city] = el )}>
+    {Object.keys(groupedMarkers).map((city, index) => (
+  <div key={city} className="border p-4 mb-4" ref={(el) => (cityRefs[city] = el)}>
           <h2 className="text-4xl text-center mt-2 font-bold mb-2 dark:text-gray-200">{city}</h2>
           <h1 className="text-center text-2xl mt-4 font-black text-gray-500 mb-2">
             {groupedMarkers[city].length}
@@ -79,7 +77,7 @@ const MarkerGrid = ({ markers }) => {
           <h2 className="text-xl font-bold -mb-8 dark:text-gray-200">Адрес:</h2>
           <h2 className="text-xl text-right font-bold mb-6 dark:text-gray-200">GPS:</h2>
           {groupedMarkers[city].map((location, locationIndex) => (
-          <div className='grid grid-cols-3'>
+            <div key={locationIndex} className='grid grid-cols-3'>
 
             {/* COPY ADDRESS BUTTON */}
             <form
