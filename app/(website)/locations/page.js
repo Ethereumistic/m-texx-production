@@ -13,23 +13,23 @@ import { useRouter } from 'next/navigation';
 
 
 
-function LocationMap({ selectedLocation }) {
+// function LocationMap({ selectedLocation }) {
 
-  const map = useMap();
+//   const map = useMap();
 
   
 
 
-    if (selectedLocation) {
-      const marker = markers.find((marker) => marker.popUp === selectedLocation);
-      if (marker) {
-        const [lat, lng] = marker.geocode;
-        map.setView([lat, lng], 28); // Adjust zoom level as needed
-      }
-    }
+//     if (selectedLocation) {
+//       const marker = markers.find((marker) => marker.popUp === selectedLocation);
+//       if (marker) {
+//         const [lat, lng] = marker.geocode;
+//         map.setView([lat, lng], 28); // Adjust zoom level as needed
+//       }
+//     }
   
-    return null; // Return null since this component doesn't render anything
-  }
+//     return null; // Return null since this component doesn't render anything
+//   }
 
 
   // const ScrollMap = () => {
@@ -88,7 +88,7 @@ const Locations = () => {
 
 
       {/* Desktop version SIDE MENU */}
-      <div className='relative sm:fixed mt-96 sm:mt-0  ml-12 sm:ml-0'>
+      {/* <div className='relative sm:fixed mt-96 sm:mt-0  ml-12 sm:ml-0'>
 
       <div className="bg-green-200 sm:ml-4 -ml-16 sm:mb-0 -mb-64 sm:mt-0 mt-8 dark:bg-gray-800 px-2 rounded-md w-72 h-[800px] overflow-auto custom-scrollbar " >
 
@@ -130,7 +130,7 @@ const Locations = () => {
         </ul>
       </div>
       
-    </div>
+    </div> */}
     {/* <ScrollMap /> */}
 
 
