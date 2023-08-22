@@ -7,7 +7,6 @@ import { FaAngleDown, FaAngleRight } from 'react-icons/fa';
 
 import MarkerGrid from '@/components/MarkerGrid';
 import MarkerClusterGroup from 'react-leaflet-cluster';
-import Backlink from '@/components/Backlink';
 import PhoneMap from '@/components/PhoneMap';
 
 import { useRouter } from 'next/navigation';
@@ -33,60 +32,10 @@ function LocationMap({ selectedLocation }) {
   }
 
   const ScrollMap = () => {
-    // const [showSmallMap, setShowSmallMap] = useState(false);
-    // const [scrollPosition, setScrollPosition] = useState(0);
-  
-    // const handleScroll = () => {
-    //   setScrollPosition(window.scrollY);
-    //   setShowSmallMap(window.scrollY > 220); // Adjust the scroll threshold as needed
-    // };
-  
-    // useEffect(() => {
-    //   window.addEventListener('scroll', handleScroll);
-    //   return () => {
-    //     window.removeEventListener('scroll', handleScroll);
-    //   };
-    // }, []);
-  
-    // const handleClick = () => {
-    //   window.scrollTo({
-    //     top: 0,
-    //     behavior: 'smooth',
-    //   });
-    // };
+    
   
     return (
-      // <div className="fixed mt-[100px] top-0 left-0 right-0 bottom-0 overflow-hidden xl:hidden lg:hidden md:hidden z-10">
-      //   {showSmallMap ? null : (
-      //     <div className="w-11/12 mx-auto fixed ml-4 pb-64">
-      //       <div style={{ pointerEvents: 'none' }}>
-      //         <MapContainer
-      //           center={[42.7339, 25.4858]}
-      //           zoom={7}
-      //           style={{ width: '100%', height: '400px', zIndex: -10 }}  
-      //         >
-      //           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      //           <MarkerClusterGroup chunkedLoading>
-      //             {markers.map((marker, index) => (
-      //               <Marker key={index} position={marker.geocode} icon={customIcon}>
-      //                 <Popup>
-      //                   <div>
-      //                     <p>City: {marker.city}</p>
-      //                     <p>Location: {marker.popUp}</p>
-      //                   </div>
-      //                 </Popup>
-      //               </Marker>
-      //             ))}
-      //           </MarkerClusterGroup>
-      //           <LocationMap selectedLocation={[42.7339, 25.4858]} />
-      //         </MapContainer>
-      //       </div>
-      //       <div style={{ position: 'relative', pointerEvents: 'auto' }} onClick={handleClick}>
-      //         {/* Your other content goes here */}
-      //       </div>
-      //     </div>
-      //   )}
-      // </div>
+      
       
       <PhoneMap />
 
@@ -123,30 +72,6 @@ const Locations = () => {
       }
     };
   
-    // const handleLocationClick = (location) => {
-    //   window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    //   setSelectedLocation(location);
-    //   const marker = markers.find((marker) => marker.popUp === location);
-    //   if (marker) {
-    //     const [lat, lng] = marker.geocode;
-
-
-    //     // map.setView([lat, lng], 14); // Adjust zoom level as needed
-    //   }
-    // };
-
-    // const handleLocationClick = (location) => {
-    //     setSelectedLocation(location);
-    //   };
-    
-    //   useEffect(() => {
-    //     if (selectedLocation) {
-    //       // Ensure this code runs only on the client-side
-    //       window.scrollTo({ top: 0, behavior: 'smooth' });
-    //     }
-    //   }, [selectedLocation]);
-
     const router = useRouter();
     const handleLocationClick = (location) => {
         // Use router to navigate to the top of the page
@@ -263,7 +188,7 @@ const Locations = () => {
         <MarkerGrid markers={markers} />
 
       </div>
-          <Backlink page="locations" />
+          {/* <Backlink page="locations" /> */}
     </div>
   )
 }
