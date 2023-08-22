@@ -32,11 +32,11 @@ function LocationMap({ selectedLocation }) {
   }
 
 
-  const ScrollMap = () => {
-     return (
-      <PhoneMap />
-    );
-  };
+  // const ScrollMap = () => {
+  //    return (
+  //     <PhoneMap />
+  //   );
+  // };
 
 
   
@@ -131,7 +131,7 @@ const Locations = () => {
       </div>
       
     </div>
-    <ScrollMap />
+    {/* <ScrollMap /> */}
 
 
         <div className='  xl:translate-x-80 lg:translate-x-80 md:translate-x-80 sm:translate-x-80'>
@@ -140,7 +140,7 @@ const Locations = () => {
 
 {/* DESKTOP MAP */}
 
-        <MapContainer
+        {/* <MapContainer
       center={[42.7339, 25.4858]}
       zoom={8}
       style={{ width: '80%', height: '800px' }} >
@@ -167,7 +167,7 @@ const Locations = () => {
 
 
 
-        </MapContainer>
+        </MapContainer> */}
         
         </div>
         </div>

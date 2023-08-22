@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { BiCurrentLocation } from 'react-icons/bi';
 import { TbCurrentLocation } from 'react-icons/tb';
 import { FaLocationArrow } from 'react-icons/fa';
-import CitySearchBox from './CitySearchBox';
  
 
 
@@ -10,7 +9,7 @@ const MarkerGrid = ({ markers }) => {
   const [copiedText, setCopiedText] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
 
-  const cityRefs = {}; // Store refs for each city element
+  const cityRefs = {}; 
 
   // const handleCitySearch = (city) => {
   //   const cityRef = cityRefs[city];
