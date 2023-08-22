@@ -31,16 +31,14 @@ function LocationMap({ selectedLocation }) {
     return null; // Return null since this component doesn't render anything
   }
 
-  const ScrollMap = () => {
-    
-  
-    return (
-      
-      
-      <PhoneMap />
 
+  const ScrollMap = () => {
+     return (
+      <PhoneMap />
     );
   };
+
+
   
 
 const markers = require('@/components/markers');
@@ -188,7 +186,6 @@ const Locations = () => {
         <MarkerGrid markers={markers} />
 
       </div>
-          {/* <Backlink page="locations" /> */}
     </div>
   )
 }

@@ -12,14 +12,14 @@ const MarkerGrid = ({ markers }) => {
 
   const cityRefs = {}; // Store refs for each city element
 
-  const handleCitySearch = (city) => {
-    const cityRef = cityRefs[city];
-    if (cityRef) {
-      const offset = -90; // Adjust the offset value as needed
-      const topPos = cityRef.getBoundingClientRect().top + window.pageYOffset + offset;
-      window.scrollTo({ top: topPos, behavior: 'smooth' });
-    }
-  };
+  // const handleCitySearch = (city) => {
+  //   const cityRef = cityRefs[city];
+  //   if (cityRef) {
+  //     const offset = -90; // Adjust the offset value as needed
+  //     const topPos = cityRef.getBoundingClientRect().top + window.pageYOffset + offset;
+  //     window.scrollTo({ top: topPos, behavior: 'smooth' });
+  //   }
+  // };
   
 
 
@@ -67,7 +67,7 @@ const MarkerGrid = ({ markers }) => {
         
       </div>
     <div className="border p-4 mx-auto sm:w-2/4 z-20 sm:mt-0 mt-[820px]">
-    <CitySearchBox cities={Object.keys(groupedMarkers)} onCitySearch={handleCitySearch} />
+    {/* <CitySearchBox cities={Object.keys(groupedMarkers)} onCitySearch={handleCitySearch} /> */}
     {Object.keys(groupedMarkers).map((city, index) => (
   <div key={city} className="border p-4 mb-4" ref={(el) => (cityRefs[city] = el)}>
           <h2 className="text-4xl text-center mt-2 font-bold mb-2 dark:text-gray-200">{city}</h2>
