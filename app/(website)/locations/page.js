@@ -183,7 +183,7 @@ const Locations = () => {
         
 
         <div className='mt-16'>
-        <MarkerGrid markers={markers} />
+        {/* <MarkerGrid markers={markers} /> */}
 
       </div>
     </div>
