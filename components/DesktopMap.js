@@ -21,7 +21,7 @@ export default function SideMenu(props) {
     return (
         <div className='w-full -translate-x-32'>
         <div className="">
-        <MapContainer
+        {/* <MapContainer
       center={[42.7339, 25.4858]}
       zoom={8}
       style={{ width: '100%', height: '800px' }} >
@@ -47,8 +47,8 @@ export default function SideMenu(props) {
 
 
 
-        </MapContainer>
-        
+        </MapContainer> */}
+        asd
         </div>
         </div>
         );
