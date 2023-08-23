@@ -6,8 +6,6 @@ import { FaAngleDown, FaAngleRight } from 'react-icons/fa';
 
 const markers = require('@/components/markers');
 
-
-
 export default function SideMenu(props) {
 
     const uniqueCityNames = [...new Set(markers.map((marker) => marker.city))];
@@ -23,12 +21,25 @@ const handleCityClick = (cityName) => {
       }
     };
 
-const router = useRouter();
     const handleLocationClick = (location) => {
-        // Use router to navigate to the top of the page
-        router.push('#top');
-        setSelectedLocation(location);
-      };
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      setSelectedLocation(location);
+      const marker = markers.find((marker) => marker.popUp === location);
+      if (marker) {
+        const [lat, lng] = marker.geocode;
+
+
+        // map.setView([lat, lng], 14); // Adjust zoom level as needed
+      }
+    };
+
+// const router = useRouter();
+//     const handleLocationClick = (location) => {
+//         // Use router to navigate to the top of the page
+//         router.push('#top');
+//         setSelectedLocation(location);
+//       };
 
   return (
     <Container className="">
@@ -74,6 +85,7 @@ const router = useRouter();
   </ul>
 </div>
 </div>
+
     </Container>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from "@/components/container";
+import { useLocation } from '@/components/LocationContext';
 import { Icon } from 'leaflet';
 import "leaflet/dist/leaflet.css";
 
@@ -14,9 +14,9 @@ const customIcon = new Icon({
   })
 
  
-export default function DesktopMap(props) {
-
-
+export default function DesktopMap({  }) {
+    
+    
     return (
         <div className='w-full'>
         <div className="">
