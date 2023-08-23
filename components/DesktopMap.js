@@ -1,7 +1,4 @@
-"use client";
-import dynamic from 'next/dynamic'
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Container from "@/components/container";
 import { Icon } from 'leaflet';
 import "leaflet/dist/leaflet.css";
@@ -16,18 +13,14 @@ const customIcon = new Icon({
     iconSize: [34, 34]
   })
 
-  const DynamicComponentWithNoSSR = dynamic(
-    () => import('../components/DesktopMap'),
-    { ssr: false }
-  )
-
+ 
 export default function DesktopMap(props) {
 
 
     return (
         <div className='w-full'>
         <div className="">
-        <DynamicComponentWithNoSSR />
+        
 
         <MapContainer
       center={[42.7339, 25.4858]}
