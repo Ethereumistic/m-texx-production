@@ -37,8 +37,9 @@ export default function Locations() {
 
           {/* MAP */}
           <NoSsr>
-          <div className="" >
-          <div className='w-full'>
+          {typeof window !== 'undefined' && (
+    <div className="">
+      <div className='w-full'>
         <div className="">
         
 
@@ -73,6 +74,7 @@ export default function Locations() {
         </div>
         </div>
           </div>
+            )}
           </NoSsr>
           {/* MAP */}
 
