@@ -13,6 +13,8 @@ import {
 import SideMenu from "@/components/SideMenu";
 import MarkerGrid from "@/components/MarkerGrid";
 import { LocationProvider } from '@/components/LocationContext';
+import Backlink from "@/components/Backlink";
+
 
 
 const DynamicMap = dynamic(() => import('@/components/DesktopMap'), {
@@ -45,6 +47,7 @@ export default function Contact() {
         </div>
       </div>
     </Container>
+    <Backlink page="locations" />
     </LocationProvider>
 
   );

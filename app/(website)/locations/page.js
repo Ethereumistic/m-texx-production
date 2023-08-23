@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import Container from "@/components/container";
 import { React, useState, useRef, useEffect } from "react";
-
+import { FaAngleDown, FaAngleRight } from 'react-icons/fa';
 import SideMenu from "@/components/SideMenu";
 import MarkerGrid from "@/components/MarkerGrid";
 
@@ -28,23 +28,8 @@ export default function Locations() {
 
 
 
-
   return (
-
-    <Container className="">
-      <div >
-        <div className="">
-
-          {/* MAP */}
-          <DynamicMap />
-          {/* MAP */}
-
-          <SideMenu />
-          <MarkerGrid markers={markers} />
-        </div>
-      </div>
-      <Backlink page="locations" />
-    </Container>
+    <div>v kontakti</div>
 
   );
 }

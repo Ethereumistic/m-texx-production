@@ -49,7 +49,6 @@ export default function DesktopMap({  }) {
 
 
         </MapContainer>
-        asd
         </div>
         </div>
         );
