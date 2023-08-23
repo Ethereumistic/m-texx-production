@@ -31,10 +31,10 @@ const router = useRouter();
       };
 
   return (
-    <Container className="mt-10 ">
-        <div className='relative sm:fixed mt-96 sm:mt-0  ml-12 sm:ml-0'>
+    <Container className="">
+        <div className=''>
 
-<div className="bg-green-200 sm:ml-4 -ml-16 sm:mb-0 -mb-64 sm:mt-0 mt-8 dark:bg-gray-800 px-2 rounded-md w-72 h-[800px] overflow-auto custom-scrollbar " >
+<div className="bg-green-200  dark:bg-gray-800 px-2 rounded-md w-72 h-[800px] overflow-auto custom-scrollbar " >
 
   <h2 className="text-2xl pl-20 font-bold mt-4 mb-6">Локации</h2>
   <ul className=''>

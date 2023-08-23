@@ -10,16 +10,21 @@ import {
   PhoneIcon
 } from "@heroicons/react/24/outline";
 import SideMenu from "@/components/SideMenu";
+import DesktopMap from "@/components/DesktopMap";
 
 export default function Contact() {
 
 
   return (
-    <Container>
-      <div>
-
-      <SideMenu />
-
+    <Container className="">
+      <div >
+        <div className="">
+          <div className="" >
+            <DesktopMap />
+          </div>
+          <SideMenu />
+          
+        </div>
       </div>
     </Container>
   );
