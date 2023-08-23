@@ -1,5 +1,4 @@
 "use client";
-import dynamic from "next/dynamic";
 import Container from "@/components/container";
 import { React, useState, useRef, useEffect } from "react";
 
@@ -11,7 +10,7 @@ import "leaflet/dist/leaflet.css";
 
 import { MapContainer, TileLayer, Marker, Popup, useMap, mapConsumer } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
-
+import NoSsr from "@/components/NoSsr";
 
 
 
@@ -37,6 +36,7 @@ export default function Locations() {
         <div className="">
 
           {/* MAP */}
+          <NoSsr>
           <div className="" >
           <div className='w-full'>
         <div className="">
@@ -73,6 +73,7 @@ export default function Locations() {
         </div>
         </div>
           </div>
+          </NoSsr>
           {/* MAP */}
 
           <SideMenu />
