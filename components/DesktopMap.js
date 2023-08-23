@@ -1,4 +1,6 @@
 "use client";
+import dynamic from 'next/dynamic'
+
 import React, { useState, useEffect } from 'react';
 import Container from "@/components/container";
 import { Icon } from 'leaflet';
@@ -7,7 +9,6 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup, useMap, mapConsumer } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 
-
 const markers = require('@/components/markers');
 
 const customIcon = new Icon({
@@ -15,16 +16,23 @@ const customIcon = new Icon({
     iconSize: [34, 34]
   })
 
+  const DynamicComponentWithNoSSR = dynamic(
+    () => import('../components/DesktopMap'),
+    { ssr: false }
+  )
 
-export default function SideMenu(props) {
+export default function DesktopMap(props) {
+
 
     return (
-        <div className='w-full -translate-x-32'>
+        <div className='w-full'>
         <div className="">
-        {/* <MapContainer
+        <DynamicComponentWithNoSSR />
+
+        <MapContainer
       center={[42.7339, 25.4858]}
       zoom={8}
-      style={{ width: '100%', height: '800px' }} >
+      style={{ width: '100%', height: '800px', zIndex: '10' }} >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 <MarkerClusterGroup
           chunkedLoading>
@@ -47,7 +55,7 @@ export default function SideMenu(props) {
 
 
 
-        </MapContainer> */}
+        </MapContainer>
         asd
         </div>
         </div>
