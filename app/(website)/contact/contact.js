@@ -11,10 +11,13 @@ import {
   PhoneIcon
 } from "@heroicons/react/24/outline";
 import SideMenu from "@/components/SideMenu";
+import MarkerGrid from "@/components/MarkerGrid";
 
 const DynamicMap = dynamic(() => import('@/components/DesktopMap'), {
   ssr: false,
 })
+
+const markers = require('@/components/markers');
 
 
 export default function Contact() {
@@ -29,7 +32,7 @@ export default function Contact() {
 
           </div>
           <SideMenu />
-          
+          <MarkerGrid markers={markers} />
         </div>
       </div>
     </Container>

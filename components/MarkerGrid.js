@@ -65,7 +65,7 @@ const MarkerGrid = ({ markers }) => {
       <div className='text-center'>
         
       </div>
-    <div className="border p-4 mx-auto sm:w-2/4 z-20 sm:mt-0 mt-[820px]">
+    <div className="border p-4 mx-auto  z-20 sm:mt-0 mt-[820px]">
     {/* <CitySearchBox cities={Object.keys(groupedMarkers)} onCitySearch={handleCitySearch} /> */}
     {Object.keys(groupedMarkers).map((city, index) => (
   <div key={city} className="border p-4 mb-4" ref={(el) => (cityRefs[city] = el)}>
