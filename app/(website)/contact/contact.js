@@ -37,14 +37,17 @@ export default function Contact() {
 
     <Container className="">
       <div >
-        <div className="">
-          <div className="" >
+          <div className="w-full " >
 
-            <DynamicMap />
+            <DynamicMap className="" />
           </div>
+
+          <div className="sm:-translate-y-[830px] sm:-translate-x-96 translate-y-[100px] md:translate-y-[50px] md:translate-x-80 lg:translate-x-80 lg:translate-y-[50px] xl:-translate-x-96 xl:-translate-y-[830px]">
           <SideMenu />
+          </div>
+
           <MarkerGrid markers={markers} />
-        </div>
+        
       </div>
     </Container>
     <Backlink page="locations" />

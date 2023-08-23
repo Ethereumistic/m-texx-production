@@ -1,10 +1,11 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import Container from "@/components/container";
 import { useRouter } from 'next/navigation';
 import { FaAngleDown, FaAngleRight } from 'react-icons/fa';
-
 const markers = require('@/components/markers');
+
+
 
 export default function SideMenu(props) {
 
@@ -12,6 +13,7 @@ export default function SideMenu(props) {
 
 const [selectedCity, setSelectedCity] = useState(null);
 const [selectedLocation, setSelectedLocation] = useState(null);
+const mapRef = useRef(null); // Create a ref for your map component
 
 const handleCityClick = (cityName) => {
     if (selectedCity === cityName) {
@@ -24,13 +26,24 @@ const handleCityClick = (cityName) => {
     const handleLocationClick = (location) => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      setSelectedLocation(location);
+
+
+      // if (!map) {
+      //   return;
+      // }
+  
+      // setSelectedLocation(location);
+      // const marker = markers.find((marker) => marker.popUp === location);
+      // if (marker) {
+      //   const [lat, lng] = marker.geocode;
+  
+      //   map.setView([lat, lng], 14);
+      // }
+
       const marker = markers.find((marker) => marker.popUp === location);
-      if (marker) {
+      if (marker && mapRef.current) {
         const [lat, lng] = marker.geocode;
-
-
-        // map.setView([lat, lng], 14); // Adjust zoom level as needed
+        mapRef.current.zoomToLocation(lat, lng); // Call a function in your Map component to zoom
       }
     };
 
@@ -42,6 +55,7 @@ const handleCityClick = (cityName) => {
 //       };
 
   return (
+
     <Container className="">
         <div className=''>
 
@@ -87,5 +101,6 @@ const handleCityClick = (cityName) => {
 </div>
 
     </Container>
+
   );
 }

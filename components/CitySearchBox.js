@@ -32,7 +32,7 @@ const CitySearchBox = ({ cities, onCitySearch }) => {
     <input
       className='-translate-y-[12px] h-[38px] border-gray-800 border rounded-lg text-center'
       type="text"
-      placeholder="Search for a city..."
+      placeholder="Търси населено място"
       value={searchQuery}
       onChange={(e) => {
         setSearchQuery(e.target.value);

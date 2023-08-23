@@ -1,7 +1,9 @@
-import React from 'react';
+import { React, useRef, useEffect } from 'react';
 import { useLocation } from '@/components/LocationContext';
+import L from 'leaflet';
 import { Icon } from 'leaflet';
 import "leaflet/dist/leaflet.css";
+
 
 import { MapContainer, TileLayer, Marker, Popup, useMap, mapConsumer } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
@@ -15,14 +17,15 @@ const customIcon = new Icon({
 
  
 export default function DesktopMap({  }) {
-    
-    
+  
+
     return (
         <div className='w-full'>
         <div className="">
         
 
         <MapContainer
+        
       center={[42.7339, 25.4858]}
       zoom={8}
       style={{ width: '100%', height: '800px', zIndex: '10' }} >
@@ -49,6 +52,7 @@ export default function DesktopMap({  }) {
 
 
         </MapContainer>
+
         </div>
         </div>
         );
