@@ -39,7 +39,8 @@ export default function Lokacii({  }) {
 
     const [selectedCity, setSelectedCity] = useState(null);
     const [selectedLocation, setSelectedLocation] = useState(null);
-  
+    const [mapFullscreen, setMapFullscreen] = useState(false);
+
     const handleCityClick = (cityName) => {
       if (selectedCity === cityName) {
         setSelectedCity(null); // Close the menu if the same city is clicked again
@@ -64,14 +65,16 @@ export default function Lokacii({  }) {
     const uniqueCityNames = [...new Set(markers.map((marker) => marker.city))];
 
 
+
     return (
         <div className='overflow-x-hidden overflow-y-hidden'>
-            <div className='w-10/12 translate-x-10 sm:translate-x-12 md:translate-x-16 lg:translate-x-72 xl:translate-x-72 2xl:translate-x-72'>
+            <div className='w-10/12 translate-x-10 sm:translate-x-12 md:translate-x-16 lg:translate-x-72 xl:translate-x-72 2xl:translate-x-72 '>
                     <MapContainer
         
                     center={[42.7339, 25.4858]}
                     zoom={8}
-                    style={{ width: '100%', height: '800px', zIndex: '10' }} >
+                    style={{ width: '100%', height: '800px', zIndex: '10' }}
+                    fullscreenControl={ true } >
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                     <MarkerClusterGroup
                     chunkedLoading>
@@ -94,9 +97,9 @@ export default function Lokacii({  }) {
                     <LocationMap selectedLocation={selectedLocation} />
 
 
-
+                    
                     </MapContainer>
-
+                    
             </div>
 
             <div className='sm:translate-y-2 md:translate-y-2 lg:-translate-y-[800px] xl:-translate-y-[800px] 2xl:-translate-y-[800px] sm:relative md:relative lg:fixed xl:fixed 2xl:fixed '>
