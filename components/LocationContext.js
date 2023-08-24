@@ -1,8 +1,17 @@
-"use client";
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-export const LocationContext = createContext(null);
+const LocationContext = createContext();
 
-export const LocationProvider = ({ children, map }) => (
-  <LocationContext.Provider value={map}>{children}</LocationContext.Provider>
-);
+export const useLocationContext = () => {
+  return useContext(LocationContext);
+};
+
+export const LocationProvider = ({ children }) => {
+  const [selectedLocation, setSelectedLocation] = useState(null);
+
+  return (
+    <LocationContext.Provider value={{ selectedLocation, setSelectedLocation }}>
+      {children}
+    </LocationContext.Provider>
+  );
+};
