@@ -14,7 +14,11 @@ const nextConfig = {
   eslint: {
     /// Set this to false if you want production builds to abort if there's lint errors
     ignoreDuringBuilds: process.env.VERCEL_ENV === "production"
-  }
+  },
+  // env: {
+  //   GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
+  //   GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
+  // }
 };
 
 module.exports = nextConfig;

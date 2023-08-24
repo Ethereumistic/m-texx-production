@@ -56,6 +56,7 @@ export default async function Layout({ children, params }) {
       <div className="mt-36">{children}</div>
 
       <Footer {...settings} />
+
     </>
   );
 }
