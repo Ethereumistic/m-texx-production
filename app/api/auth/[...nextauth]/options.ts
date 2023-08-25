@@ -1,7 +1,7 @@
-import { NextAuthOptions } from "next-auth";
-import GitHubProvider from "next-auth/providers/github"
+import { NextAuthOptions } from 'next-auth/index';
+import GitHubProvider from "next-auth/providers/github";
 import { GithubProfile } from "next-auth/providers/github";
-import CredentialsProvider from 'next-auth/providers/credentials'
+import CredentialsProvider from 'next-auth/providers/credentials';
 
 export const options: NextAuthOptions = {
     providers:[
@@ -51,20 +51,6 @@ export const options: NextAuthOptions = {
             }
           },
         })
-        //     const user = { id:"42", name: "Dave", password: "asd", role: "admin"}
-
-        //     if (credentials?.username === user.name && credentials?.password === user.password) {
-        //       return user
-        //     }
-        //     else {
-        //       return null
-        //     }
-        //   },
-        // })
-
-
-        
-        
     ],
 
     callbacks: {
