@@ -38,8 +38,15 @@ const Recycling = () => {
           <small className='sm:px-32 px-4 sm:pt-2 pt-4'>Събраните материали за рециклиране на M-Texx се продават на вносители на текстил втора употреба в различни развиващи се страни. Това подкрепя нашия бизнес модел в предоставянето на безплатни услуги за събиране и образователни дейности.</small>
         </div>
       </div>
-
-      
+      <div className='relative'>          
+      <Image
+          className="mx-auto rounded-lg border-4 border-green-300 dark:border-gray-300 "
+          src="/img/ourmission.webp" // Relative path to your image in the public folder
+          alt="Description of the image"
+          width={300}
+          height={1}
+          />
+        </div>
 
     </div>
   );

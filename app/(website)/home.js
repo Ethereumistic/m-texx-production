@@ -43,14 +43,34 @@ export default function Post({ posts }) {
 
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-center">
-              <h1 class="mx-16 text-md xl:text-5xl text-white font-bold text-right">Рециклиране на текстил: Втори живот за стари дрехи, 
+              <h1 class="mx-16 text-xl xl:text-5xl text-white font-bold text-right">Рециклиране на текстил: Втори живот за стари дрехи, 
               <br />
               първа стъпка към...</h1>
               <button class="text-md xl:text-2xl mr-4 mt-4 bg-transparent border border-white hover:bg-green-500 hover:border-green-500 text-white py-1 px-2 xl:py-4 xl:px-8 rounded-full float-right">Рециклиране на Текстил</button>
             </div>
-          </div>
-
+            </div>
       </div>
+
+      <div className="mx-auto px-4 md:px-8 lg:px-16 xl:px-96 my-8">
+        <div className="flex flex-col items-center p-8 bg-green-300 dark:bg-gray-800 rounded-lg shadow-md">
+          <h2 className="text-xl xl:text-4xl font-bold mb-4 text-center">Запази околната среда, чрез преизползване, рециклиране и ...</h2>
+          <p className="text-lg xl:text-2xl text-center">
+          През 2022г. България е генерирала повече от 100 000 тона текстилни и кожени отпадъци, 
+          но само 2% от този отпадък се рециклира. Ние целим да предоставим безплатно рециклиране 
+          като услуга на домакинства и организации в България и да насърчим за преизползването, 
+          рециклирането и намаляване на използването, чрез образование, с акцент върху 
+          ангажирането на младежите в училищата.
+          </p>
+        </div>
+      </div>
+
+      <Image
+        className="mx-auto rounded-lg border-4 border-green-300 dark:border-gray-300"
+        src="/img/esvg.svg" // Relative path to your image in the public folder
+        alt="Description of the image"
+        width={1000} // Specify the width
+        height={1000} // Specify the height
+      />
     </>
   );
 }
