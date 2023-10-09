@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
+import Image from 'next/image';
+
 
 export default function Post({ posts }) {
   return (
@@ -31,7 +33,20 @@ export default function Post({ posts }) {
           </div>
         </Container>
       )} */}
-      <div className="text-center text-4xl">САМО ЛОКАЦИИТЕ РАБОТЯТ</div>
+      {/* <div className="text-center text-4xl">САМО ЛОКАЦИИТЕ РАБОТЯТ</div> */}
+      <div className="relative ">
+        <video className="rounded-lg -mt-6" src="/img/bgvideo.webm" autoPlay loop style={{ filter: 'brightness(0.6)' }}></video>
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <h1 class="text-5xl text-white font-bold text-right">Рециклиране на текстил: Втори живот за стари дрехи, 
+              <br />
+              първа стъпка към...</h1>
+              <button class="text-2xl mt-2 bg-transparent border border-white hover:bg-green-600 hover:border-green-500 text-white py-4 px-8 rounded-full float-right">Рециклиране на Текстил</button>
+            </div>
+          </div>
+
+      </div>
     </>
   );
 }

@@ -59,6 +59,9 @@ dependencies:
   leaflet:
     specifier: ^1.9.4
     version: 1.9.4
+  local-storage:
+    specifier: ^2.0.0
+    version: 2.0.0
   next:
     specifier: ^13.4.12
     version: 13.4.12(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)
@@ -5339,6 +5342,10 @@ packages:
 
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+
+  /local-storage@2.0.0:
+    resolution: {integrity: sha512-/0sRoeijw7yr/igbVVygDuq6dlYCmtsuTmmpnweVlVtl/s10pf5BCq8LWBxW/AMyFJ3MhMUuggMZiYlx6qr9tw==}
+    dev: false
 
   /locate-path@5.0.0:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
