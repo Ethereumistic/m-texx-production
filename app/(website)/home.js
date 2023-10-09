@@ -42,7 +42,7 @@ export default function Post({ posts }) {
               <h1 class="text-5xl text-white font-bold text-right">Рециклиране на текстил: Втори живот за стари дрехи, 
               <br />
               първа стъпка към...</h1>
-              <button class="text-2xl mt-2 bg-transparent border border-white hover:bg-green-600 hover:border-green-500 text-white py-4 px-8 rounded-full float-right">Рециклиране на Текстил</button>
+              <button class="text-2xl mt-2 bg-transparent border border-white hover:bg-green-500 hover:border-green-500 text-white py-4 px-8 rounded-full float-right">Рециклиране на Текстил</button>
             </div>
           </div>
 

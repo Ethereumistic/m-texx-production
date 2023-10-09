@@ -48,6 +48,7 @@ const Recycling = () => {
           className="w-full h-full object-cover filter brightness-50"
         /> */}
         <Image 
+          alt='background-snimka'
           src="/img/ourmission.webp"
           width={1920}
           height={800}/>
