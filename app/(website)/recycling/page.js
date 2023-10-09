@@ -39,44 +39,7 @@ const Recycling = () => {
         </div>
       </div>
 
-      <div className="relative w-full mb-16 md:mb-96">
-      {/* Background Image */}
-      {/* <div className="w-full h-[800px] md:h-[600px] relative overflow-hidden"> */}
-        {/* <img
-          src="https://cdn.discordapp.com/attachments/1017047163324346420/1140694050513633421/ourmission.webp"
-          alt="Banner Background"
-          className="w-full h-full object-cover filter brightness-50"
-        /> */}
-        <Image 
-          alt='background-snimka'
-          src="/img/ourmission.webp"
-          width={1920}
-          height={800}/>
-      {/* </div> */}
-
-      {/* Lightbulb Icon */}
-      <div className="mx-auto text-center">
-        <FaLightbulb className="text-green-500 text-6xl text-center" />
-      </div>
-
-      {/* Quote */}
-      <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 ">
-        <p className="text-white text-center text-2xl md:text-4xl lg:text-5xl">
-          "НАПРАВЕТЕ ВАШИЯ ПРИНОС ЗА ОПАЗВАНЕ НА ПРИРОДАТА КАТО ДАРИТЕ ВТОРИ ЖИВОТ НА ВАШИТЕ ДРЕХИ."
-        </p>
-      </div>
-
-      {/* LINE */}
-      <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2  w-3/4 border-b border-white">
-      </div>
-
-      {/* Author */}
-      <div className="absolute bottom-1/8 left-1/2 transform -translate-x-1/2 ">
-        <p className="text-white text-center text-sm md:text-lg lg:text-xl">
-          - M-Texx Textile Recycling
-        </p>
-      </div>
-    </div>
+      
 
     </div>
   );
