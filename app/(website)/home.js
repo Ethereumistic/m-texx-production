@@ -1,10 +1,17 @@
+"use client";
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
 import Image from 'next/image';
-
-
+import { FaHome, FaBriefcase, FaUser, FaCog, FaLightbulb, FaTrophy } from 'react-icons/fa';
+import TextilePathh from 'components/TextilePathh'
+import TextilePath from 'components/TextilePath'
+import Carousel from "@/components/Carousel";
+import Carousell from "@/components/Carousell";
+import CircleSelector from "@/components/CircleSelector";
 export default function Post({ posts }) {
+  
+
   return (
     <>
       {/* {posts && (
@@ -38,7 +45,7 @@ export default function Post({ posts }) {
         {/* Mobile Background Video */}
         <video className="-mt-6 brightness-75 md:hidden" src="/img/background2.mp4" autoPlay loop muted playsInline></video>
         {/* Desktop Background Video */}
-        <video className="hidden md:block xl:rounded-lg -mt-6 brightness-75" src="/img/bgvideo.webm" autoPlay loop muted playsInline></video>
+        <video className="hidden md:block xl:rounded-lg -mt-6 brightness-75" src="/img/bgvideo.webm" autoPlay loop muted ></video>
 
 
           <div class="absolute inset-0 flex items-center justify-center">
@@ -46,7 +53,9 @@ export default function Post({ posts }) {
               <h1 class="mx-16 text-xl xl:text-5xl text-white font-bold text-right">Рециклиране на текстил: Втори живот за стари дрехи, 
               <br />
               първа стъпка към...</h1>
+              <Link href="/recycling">
               <button class="text-md xl:text-2xl mr-4 mt-4 bg-transparent border border-white hover:bg-green-500 hover:border-green-500 text-white py-1 px-2 xl:py-4 xl:px-8 rounded-full float-right">Рециклиране на Текстил</button>
+              </Link>
             </div>
             </div>
       </div>
@@ -65,12 +74,24 @@ export default function Post({ posts }) {
       </div>
 
       <Image
-        className="mx-auto rounded-lg border-4 border-green-300 dark:border-gray-300"
+        className="mx-auto rounded-lg border-4 border-green-300 dark:border-gray-300 mb-8"
         src="/img/esvg.svg" // Relative path to your image in the public folder
         alt="Description of the image"
         width={1000} // Specify the width
         height={1000} // Specify the height
       />
+
+      <div className='w-full h-auto bg-green-300 my-2'>
+        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
+    </div>
+
+      <Carousel />
+
+      <div className='w-full h-auto bg-green-300  -mt-28 xl:-mt-[480px] '>
+        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
+    </div>
+
+
     </>
   );
 }

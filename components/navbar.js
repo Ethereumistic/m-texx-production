@@ -67,7 +67,7 @@ export default function Navbar(props) {
       badge: "new"
     },
     {
-      label: "Рециклиране",
+      label: "Рециклиране", 
       href: "/recycling",
       external: false,
     },

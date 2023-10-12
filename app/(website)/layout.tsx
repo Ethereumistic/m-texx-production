@@ -12,14 +12,14 @@ export async function sharedMetaData(params) {
     title: {
       default:
         settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+        "M-Texx Textile Recycling",
+      template: "%s | M-Texx"
     },
     description:
       settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+      "M-Texx - Textile Recycling",
+    keywords: ["M-Texx", "Textile", "Recycling"],
+    authors: [{ name: "Viktor" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -33,7 +33,7 @@ export async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "M-Texx",
       card: "summary_large_image"
     },
     robots: {
