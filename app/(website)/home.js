@@ -81,13 +81,14 @@ export default function Post({ posts }) {
       />
 
       <div className='w-full h-auto bg-green-300 my-2'>
-        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
+        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3 mx-12'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
     </div>
 
       <Carousel />
+      <Carousell />
 
       <div className='w-full h-auto bg-green-300  -mt-28 xl:-mt-[480px] '>
-        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
+        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3 mx-12'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
     </div>
 
 

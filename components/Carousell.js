@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import CircleSelector from './CircleSelector';
+import CircleSelectorr from './CircleSelectorr';
+import Image from 'next/image';
+
 const images = [
   {
     src: '/img/carousel/recycling.png',
@@ -28,7 +30,7 @@ const images = [
     description: 'This is a description for the container photo.',
   },
   {
-    src: 'img/carousel/sorting.jpg',
+    src: '/img/carousel/sorting.jpg',
     title: 'Sorting',
     description: 'This is a description for the sorting photo.',
   },
@@ -58,27 +60,25 @@ const Carousell = () => {
   }, []);
 
   return (
-<div class="container mx-auto">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-4 mb-4">
-                <CircleSelector currentIndex={currentIndex} handleCircleClick={handleCircleClick} />
-            </div>
-            <div class="w-full sm:w-1/2 xl:w-full px-4 mb-4">
-                <div class="bg-green-500 h-48 sm:h-32 md:h-48 lg:h-48 rounded-md text-white flex items-center justify-center">
-                <div className="w-[500px] h-[500px] relative ml-32">
-        <div className="relative h-full w-full overflow-hidden rounded-t-xl">
+    <>
+    <div className="scale-50 xl:scale-100 translate-y-0 xl:translate-y-32 -translate-x-4 xl:-translate-x-80 mb-8 xl:mb-0">
+      <CircleSelectorr className="" currentIndex={currentIndex} handleCircleClick={handleCircleClick} />
+    </div>
+
+    <div className="flex items-center justify-center h-screen">
+      <div className="w-[500px] h-[500px] absolute scale-75 xl:scale-100 translate-x-0 xl:translate-x-80 -translate-y-0 xl:-translate-y-96 mb-24">
+        <div className="h-full w-full overflow-hidden rounded-t-xl relative">
           {images.map((image, index) => (
-            <img
+            <Image
               key={index}
               src={image.src}
               alt={`Carousel Image ${index + 1}`}
               className={`absolute h-full w-full transition-opacity ${
                 index === currentIndex ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'center center', // Center the image both horizontally and vertically
-              }}
+              layout="fill" // Use the layout property to specify how the image should behave
+              objectFit="cover"
+              objectPosition="center center"
             />
           ))}
         </div>
@@ -99,19 +99,14 @@ const Carousell = () => {
           </button>
         </div>
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-green-300 text-white translate-y-24 rounded-b-xl">
-          <div className="mb-2 text-xl font-bold">
-            {images[currentIndex].title}
-          </div>
-          <div className="text-sm">
-            {images[currentIndex].description}
-          </div>
+          <div className="mb-2 text-xl font-bold">{images[currentIndex].title}</div>
+          <div className="text-sm">{images[currentIndex].description}</div>
         </div>
       </div>
-                </div>
-            </div>
-        </div>
     </div>
-  );
+  </>
+);
 };
 
 export default Carousell;
+

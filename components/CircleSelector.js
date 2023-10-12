@@ -1,44 +1,65 @@
 import React from 'react';
+import Image from 'next/image';
+import { useTheme } from "next-themes";
+import { FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const CircleSelector = ({ currentIndex, handleCircleClick }) => {
-  const originalCircles = [
-    {
-      id: 1,
-      src: '/img/circle/recycling.svg',
-      title: 'Recycling',
-      description: 'This is a description for the recycling photo.',
-    },
-    {
-      id: 2,
-      src: '/img/circle/production.svg',
-      title: 'Production',
-      description: 'This is a description for the production photo.',
-    },
-    {
-      id: 3,
-      src: '/img/circle/selling.svg',
-      title: 'Selling',
-      description: 'This is a description for the selling photo.',
-    },
-    {
-      id: 4,
-      src: '/img/circle/wear.svg',
-      title: 'Wear',
-      description: 'This is a description for the wear photo.',
-    },
-    {
-      id: 5,
-      src: '/img/circle/container.svg',
-      title: 'Container',
-      description: 'This is a description for the container photo.',
-    },
-    {
-      id: 6,
-      src: 'img/circle/sorting.svg',
-      title: 'Sorting',
-      description: 'This is a description for the sorting photo.',
-    },
-  ];
+
+    const { theme } = useTheme();
+
+    const newCircle = {
+        id: 7,
+        src: '/img/circle/trash.svg',
+        srcDark:'/img/circle/trash-d.svg',
+        title: 'Изхвърляне на боклука',
+        description: 'Изхвърляне на боклука',
+      }
+
+    const originalCircles = [
+        {
+          id: 1,
+          src: '/img/circle/recycling.svg',
+          srcDark:'/img/circle/recycling-d.svg',
+          title: 'Рециклиране',
+          description: 'This is a description for the recycling photo.',
+        },
+        {
+          id: 2,
+          src: '/img/circle/production.svg',
+          srcDark:'/img/circle/production-d.svg',
+          title: 'Продукция',
+          description: 'This is a description for the production photo.',
+        },
+        {
+          id: 3,
+          src: '/img/circle/selling.svg',
+          srcDark:'/img/circle/selling-d.svg',
+          title: 'Продажби',
+          description: 'This is a description for the selling photo.',
+        },
+        {
+          id: 4,
+          src: '/img/circle/wear.svg',
+          srcDark:'/img/circle/wear-d.svg',
+          title: 'Употреба',
+          description: 'This is a description for the wear photo.',
+        },
+        {
+          id: 5,
+          src: '/img/circle/container.svg',
+          srcDark:'/img/circle/container-d.svg',
+          title: 'Оставяне в контейнер',
+          description: 'This is a description for the container photo.',
+        },
+        {
+          id: 6,
+          src: '/img/circle/sorting.svg',
+          srcDark:'/img/circle/sorting-d.svg',
+          title: 'Сортиране',
+          description: 'This is a description for the sorting photo.',
+        },
+        
+      ];
 
   const displayOrder = [4, 5, 6, 1, 2, 3]; // Adjust the display order as needed
 
@@ -50,10 +71,20 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
       <div className="relative w-32 h-32">
         {displayOrder.map((circleId, index) => {
           const circle = originalCircles.find((c) => c.id === circleId);
+          const src = theme === "dark" ? circle.srcDark : circle.src;
+
+          // Calculate the position of each circle
+          const circleAngle = (2 * Math.PI * index) / totalCircles;
+          const circleTop = radius * Math.sin(circleAngle);
+          const circleLeft = radius * Math.cos(circleAngle);
+
+          // Calculate the rotation for the arrows
+          const arrowRotation = (circleAngle + Math.PI) * (180 / Math.PI);
+          
           return (
             <div
               key={index}
-              className="absolute w-48 h-48 rounded-full cursor-pointer"
+              className="absolute w-52 h-52 rounded-full cursor-pointer -ml-24"
               style={{
                 // Calculate the position of each circle in the circular formation
                 top: `${radius * Math.sin((2 * Math.PI * index) / totalCircles)}px`,
@@ -61,14 +92,36 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
               }}
               onClick={() => handleCircleClick(originalCircles.findIndex((c) => c.id === circleId))}
             >
-              <img
-                src={circle.src}
+              <Image
+                src={src}
                 alt={circle.title}
-                className="w-full h-full object-contain border-green-300 hover:border-green-500 border-8 rounded-full"
+                className="w-full h-full object-contain border-green-300 hover:border-green-500 dark:border-gray-500 dark:hover:border-gray-800 border-8 rounded-full"
+                layout="fill" // Use the layout property to specify how the image should behave
               />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-14 dark:text-white text-black font-bold text-center">
+                    {circle.title}
+                </div>
             </div>
           );
         })}
+
+<div className="absolute w-52 h-52 rounded-full cursor-pointer" style={{ top: '350px', left: '220px' }}>
+        <Image
+          src={theme === "dark" ? newCircle.srcDark : newCircle.src} // Use theme-specific src
+          alt="Your New Circle"
+          className="w-full h-full object-contain border-red-300 hover:border-red-500 dark:border-red-800 dark:hover:border-red-500 border-8 rounded-full"
+          layout="fill"
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-10 dark:text-white text-black font-bold text-center">
+            {newCircle.title}
+        </div>
+        <div className='rotate-45 mt-[100px]'>
+            <div className="absolute w-[2px] h-56 bg-red-500" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}></div>
+            <div className="absolute w-56 h-[2px] bg-red-500" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}></div>
+        </div>
+
+        </div>
+        
       </div>
     </div>
   );
