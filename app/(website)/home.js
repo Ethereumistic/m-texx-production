@@ -4,8 +4,7 @@ import Container from "@/components/container";
 import PostList from "@/components/postlist";
 import Image from 'next/image';
 import { FaHome, FaBriefcase, FaUser, FaCog, FaLightbulb, FaTrophy } from 'react-icons/fa';
-import TextilePathh from 'components/TextilePathh'
-import TextilePath from 'components/TextilePath'
+
 import Carousel from "@/components/Carousel";
 import Carousell from "@/components/Carousell";
 import CircleSelector from "@/components/CircleSelector";
