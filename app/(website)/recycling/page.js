@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaLightbulb } from 'react-icons/fa';
-import Carousell from '@/components/Carousell';
 
 
 const Recycling = () => {
@@ -49,7 +48,6 @@ const Recycling = () => {
           height={1}
           />
         </div>
-        <Carousell />
     </div>
   );
 };
