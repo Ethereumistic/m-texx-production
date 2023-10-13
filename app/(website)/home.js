@@ -5,7 +5,7 @@ import PostList from "@/components/postlist";
 import Image from 'next/image';
 import { FaHome, FaBriefcase, FaUser, FaCog, FaLightbulb, FaTrophy } from 'react-icons/fa';
 
-
+import Collect from "@/components/Collect";
 import CircleSelector from "@/components/CircleSelector";
 import ImgCarousel from "@/components/ImgCarousel";
 export default function Post({ posts }) {
@@ -90,7 +90,7 @@ export default function Post({ posts }) {
         <h1 className='text-2xl xl:text-4xl text-gray-800 dark:text-white font-bold text-center py-3 mx-12'>Изхвърляне на дрехи в контейнери за общи отпадъци води до замърсяване на околната среда</h1>
     </div>
 
-
+      <Collect />
     </>
   );
 }
