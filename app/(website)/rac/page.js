@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import CircleSelector from 'components/CircleSelector';
-import ImgCarousel from '@/components/ImgCarousel';
 const images = [
   {
     src: '/img/carousel/recycling.png',
@@ -41,7 +40,7 @@ const images = [
   },
 ];
 
-const ImgCarousel = () => {
+const Rac = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -68,7 +67,7 @@ const ImgCarousel = () => {
     <>
 <div class="flex items-center flex-wrap justify-around my-5 -mb-28 sm:-mb-28 md:-mb-28 lg:-mb-28 xl:mb-28 ">
         <div class="flex items-center justify-center w-[800px] h-[800px] bg-transparent scale-[0.49] xl:scale-100 -translate-y-48 sm:-translate-y-48 md:-translate-y-48 lg:-translate-y-44 xl:translate-y-12">
-            <CircleSelectorr className="" currentIndex={currentIndex} handleCircleClick={handleCircleClick} />
+            <CircleSelector className="" currentIndex={currentIndex} handleCircleClick={handleCircleClick} />
         </div>
   
         {/* <div class="flex items-center justify-center w-[800px] h-[800px] bg-transparent scale-[0.57] xl:scale-90 -translate-y-[520px] sm:-translate-y-[520px] md:-translate-y-[520px] lg:-translate-y-[510px] xl:-translate-y-0"> */}
@@ -122,4 +121,4 @@ const ImgCarousel = () => {
   );
 };
 
-export default ImgCarousel;
+export default Rac;
