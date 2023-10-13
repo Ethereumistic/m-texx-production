@@ -5,9 +5,9 @@ import PostList from "@/components/postlist";
 import Image from 'next/image';
 import { FaHome, FaBriefcase, FaUser, FaCog, FaLightbulb, FaTrophy } from 'react-icons/fa';
 
-import Carousel from "@/components/Carousel";
-import Carousell from "@/components/Carousell";
+
 import CircleSelector from "@/components/CircleSelector";
+import ImgCarousel from "@/components/ImgCarousel";
 export default function Post({ posts }) {
   
 
@@ -80,15 +80,14 @@ export default function Post({ posts }) {
         height={1000} // Specify the height
       />
 
-      <div className='w-full h-auto bg-green-300 my-2'>
-        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3 mx-12'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
+      <div className='w-full h-auto bg-green-300 dark:bg-gray-800 my-8'>
+        <h1 className='text-2xl xl:text-4xl text-gray-800 dark:text-white font-bold text-center py-3 mx-12'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
     </div>
 
-      <Carousel />
-      <Carousell />
+      <ImgCarousel />
 
-      <div className='w-full h-auto bg-green-300  -mt-28 xl:-mt-[480px] '>
-        <h1 className='text-2xl xl:text-4xl font-bold text-center py-3 mx-12'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
+      <div className='w-full h-auto bg-red-300 dark:bg-gray-800'>
+        <h1 className='text-2xl xl:text-4xl text-gray-800 dark:text-white font-bold text-center py-3 mx-12'>Изхвърляне на дрехи в контейнери за общи отпадъци води до замърсяване на околната среда</h1>
     </div>
 
 

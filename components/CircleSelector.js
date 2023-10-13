@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTheme } from "next-themes";
-import { FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const CircleSelector = ({ currentIndex, handleCircleClick }) => {
 
@@ -46,8 +45,8 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
         },
         {
           id: 5,
-          src: '/img/circle/container.svg',
-          srcDark:'/img/circle/container-d.svg',
+          src: '/img/circle/container2.svg',
+          srcDark:'/img/circle/container-dd.svg',
           title: 'Оставяне в контейнер',
           description: 'This is a description for the container photo.',
         },
@@ -61,14 +60,16 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
         
       ];
 
+      
+
   const displayOrder = [4, 5, 6, 1, 2, 3]; // Adjust the display order as needed
 
   const totalCircles = originalCircles.length;
   const radius = 250; // Adjust the radius as needed
 
   return (
-    <div className="flex justify-center mt-32">
-      <div className="relative w-32 h-32">
+<div class="flex items-center flex-wrap justify-center -translate-x-36 -translate-y-44 ">
+      <div className="relative ">
         {displayOrder.map((circleId, index) => {
           const circle = originalCircles.find((c) => c.id === circleId);
           const src = theme === "dark" ? circle.srcDark : circle.src;
@@ -84,13 +85,16 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
           return (
             <div
               key={index}
-              className="absolute w-52 h-52 rounded-full cursor-pointer -ml-24"
+              className="absolute w-52 h-52 rounded-full cursor-pointer "
               style={{
                 // Calculate the position of each circle in the circular formation
                 top: `${radius * Math.sin((2 * Math.PI * index) / totalCircles)}px`,
                 left: `${radius * Math.cos((2 * Math.PI * index) / totalCircles)}px`,
               }}
-              onClick={() => handleCircleClick(originalCircles.findIndex((c) => c.id === circleId))}
+              onClick={() => {
+                console.log("Clicked on circle with id:", circle.id);
+                handleCircleClick(originalCircles.findIndex((c) => c.id === circleId))
+              }}
             >
               <Image
                 src={src}
@@ -98,14 +102,14 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
                 className="w-full h-full object-contain border-green-300 hover:border-green-500 dark:border-gray-500 dark:hover:border-gray-800 border-8 rounded-full"
                 layout="fill" // Use the layout property to specify how the image should behave
               />
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-14 dark:text-white text-black font-bold text-center">
-                    {circle.title}
+                <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 ${circle.id === 5 ? 'translate-y-8' : 'translate-y-14'} dark:text-white text-black font-bold text-center`}>
+                  {circle.title}
                 </div>
             </div>
           );
         })}
 
-<div className="absolute w-52 h-52 rounded-full cursor-pointer" style={{ top: '350px', left: '220px' }}>
+<div className="absolute w-52 h-52 rounded-full cursor-pointer translate-x-28" style={{ top: '350px', left: '220px' }}>
         <Image
           src={theme === "dark" ? newCircle.srcDark : newCircle.src} // Use theme-specific src
           alt="Your New Circle"
