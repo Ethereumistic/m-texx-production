@@ -3,6 +3,9 @@ import { Providers } from "./providers";
 import { cx } from "@/utils/all";
 import { Inter, Lora } from "next/font/google";
 
+
+const locales = ['en', 'bg'];
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter"
@@ -29,3 +32,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+

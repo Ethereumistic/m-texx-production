@@ -11,6 +11,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
 import ThemeSwitch from "./themeSwitch";
 import { useState, useEffect } from "react";
+import { addScrollHandler } from '@/components/scrollHandler'
 
 
 
@@ -19,6 +20,14 @@ import { useState, useEffect } from "react";
 export default function Navbar(props) {
 
   // const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    // Call the utility function to add scroll handler
+    const cleanup = addScrollHandler();
+
+    // Cleanup the event listener on component unmount
+    return cleanup;
+  }, []);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -96,13 +105,13 @@ export default function Navbar(props) {
   
 
   return (
-<div className="fixed top-0 z-40 sm:z-50 w-full box-content bg-white dark:bg-gray-800 shadow">
-  <Container className="-mt-2">
+<div id="scrollDiv" className="fixed top-0 z-40 sm:z-50 w-full box-content bg-white dark:bg-gray-800 shadow-xl">
+  <Container className="-mt-4">
     <nav>
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="sm:mt-0 mt-4 flex flex-wrap justify-between md:flex-nowrap md:gap-10">
+              <div className="sm:mt-0 mt-2 flex flex-wrap justify-between md:flex-nowrap md:gap-10">
                 {/* <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
 
                   {leftmenu.map((item, index) => (
@@ -126,8 +135,8 @@ export default function Navbar(props) {
                     </Fragment>
                   ))}
                 </div> */}
-                <div className="flex w-full items-center justify-between md:w-auto ">
-                  <Link href="/" className="w-32 dark:hidden">
+                <div className="flex w-full items-center justify-between md:w-auto " >
+                  <Link href="/" className="w-32 dark:hidden" >
                     {props.logo ? (
                       <Image
                         {...urlForImage(props.logo)}
@@ -141,7 +150,7 @@ export default function Navbar(props) {
                       </span>
                     )}
                   </Link>
-                  <Link href="/" className="hidden w-32 dark:block">
+                  <Link href="/" className="hidden w-32 dark:block" >
                     {props.logoalt ? (
                       <Image
                         {...urlForImage(props.logoalt)}
@@ -155,7 +164,6 @@ export default function Navbar(props) {
                       </span>
                     )}
                   </Link>
-
                   
                   
                   <Disclosure.Button
