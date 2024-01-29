@@ -12,11 +12,11 @@ const ThemeSwitch = () => {
 
   return (
     <button
-      className="inline-flex items-center focus:outline-none"
+      className="inline-flex items-center focus:outline-none text-dgreen dark:text-white"
       onClick={toggleTheme}
     >
       {theme === "light" ? (
-        <MoonIcon className="w-6 h-6 mr-2 mt-2" />
+        <MoonIcon className="w-6 h-6 mr-2 mt-2 " />
       ) : (
         <SunIcon className="w-6 h-6 mr-2 mt-2" />
       )}

@@ -15,10 +15,10 @@ import { useState, useEffect } from "react";
 
 
 
-
 export default function Navbar(props) {
 
   // const [isScrolled, setIsScrolled] = useState(false);
+
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -96,7 +96,7 @@ export default function Navbar(props) {
   
 
   return (
-<div className="fixed top-0 z-40 sm:z-50 w-full box-content bg-white dark:bg-gray-800 shadow">
+<div className="fixed top-0 z-40 sm:z-50 w-full box-content bg-white dark:bg-dgreen shadow">
   <Container className="-mt-2">
     <nav>
         <Disclosure>
@@ -203,7 +203,7 @@ export default function Navbar(props) {
                         <Link
                           href={item.href}
                           key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-green-500 dark:text-gray-400"
+                          className="px-5 py-2 text-md font-russo text-dgreen hover:text-lgreen dark:text-white"
                           target={item.external ? "_blank" : ""}
                           rel={item.external ? "noopener" : ""}>
                           <span> {item.label}</span>
@@ -290,7 +290,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
             <Menu.Items
               className={cx(
                 "z-50 origin-top-left rounded-md focus:outline-none lg:absolute lg:left-0 lg:w-56",
-                !mobile && "bg-white shadow-lg dark:bg-gray-800"
+                !mobile && "bg-white shadow-lg dark:bg-dgreen"
               )}>
               <div className={cx(!mobile && "py-3")}>
                 {items.map((item, index) => (

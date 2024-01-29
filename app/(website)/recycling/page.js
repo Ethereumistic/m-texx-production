@@ -8,7 +8,7 @@ const Recycling = () => {
   return (
     <div>
       <div className="mx-auto px-4 md:px-8 lg:px-16 xl:px-96 my-8">
-        <div className="flex flex-col items-center p-8 bg-green-300 dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="flex flex-col items-center p-8 bg-green-300 dark:bg-dgreen rounded-lg shadow-md">
           <h2 className="text-4xl font-bold mb-4">Нашата мисия</h2>
           <p className="text-lg text-center">
             M-Texx се стреми да окаже положително въздействие; настоящата ни цел е да утроим процента на рециклирания
@@ -20,7 +20,7 @@ const Recycling = () => {
       </div>
 
       <div className="mx-auto px-4 md:px-8 lg:px-16 xl:px-96">
-        <div className="flex flex-col items-center p-8 bg-green-300 dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="flex flex-col items-center p-8 bg-green-300 dark:bg-dgreen rounded-lg shadow-md">
           <h2 className="text-3xl text-center font-bold mb-4">Жизненият цикъл на текстила</h2>
           <h2 className="text-xl text-center font-bold mb-2">
             Ние работим с нашите партньори, за да поддържаме текстила в затворен цикъл на рециклиране, за да помогнем на:

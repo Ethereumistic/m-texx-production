@@ -59,14 +59,14 @@ const handleCityClick = (cityName) => {
     <Container className="">
         <div className=''>
 
-<div className="bg-green-200  dark:bg-gray-800 px-2 rounded-md w-72 h-[800px] overflow-auto custom-scrollbar " >
+<div className="bg-lgreen  dark:bg-dgreen px-2 rounded-md w-72 h-[800px] overflow-auto custom-scrollbar " >
 
   <h2 className="text-2xl pl-20 font-bold mt-4 mb-6">Локации</h2>
   <ul className=''>
     {uniqueCityNames.map((cityName, index) => (
       <li key={index} className=" pl-16 py-2 border-white border  w-full">
         <div
-          className="flex items-center font-bold cursor-pointer hover:text-green-400 text-green-900 dark:text-gray-300"
+          className="flex items-center font-bold cursor-pointer hover:text-green-400 text-dgreen dark:text-gray-300"
           onClick={() => handleCityClick(cityName)}
           onTouchStart={() => handleCityClick(cityName)}
            >

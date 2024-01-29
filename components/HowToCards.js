@@ -40,7 +40,7 @@ return (
             key={index}
             className="px-12 border border-black"
           >
-            <div className='bg-green-100 dark:bg-gray-800 p-4 rounded-xl'>
+            <div className='bg-green-100 dark:bg-dgreen p-4 rounded-xl'>
             <Image
                 className='hover:scale-110 transition'
               src={item.src}

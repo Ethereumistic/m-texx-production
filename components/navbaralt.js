@@ -231,7 +231,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
             <Menu.Items
               className={cx(
                 "z-20 origin-top-left rounded-md  focus:outline-none  lg:absolute lg:left-0  lg:w-56",
-                !mobile && "bg-white shadow-lg  dark:bg-gray-800"
+                !mobile && "bg-white shadow-lg  dark:bg-dgreen"
               )}>
               <div className={cx(!mobile && "py-3")}>
                 {items.map((item, index) => (

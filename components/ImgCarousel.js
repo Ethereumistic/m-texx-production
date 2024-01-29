@@ -94,7 +94,7 @@ const ImgCarousel = () => {
         <div className="absolute top-0 left-0 flex items-center h-full">
           <button
             onClick={goToPrevious}
-            className="text-3xl text-green-300 hover:text-green-500 p-2 focus:outline-none"
+            className="text-3xl text-lgreen hover:text-green-500 p-2 focus:outline-none"
           >
             <FaArrowLeft />
           </button>
@@ -102,16 +102,16 @@ const ImgCarousel = () => {
         <div className="absolute top-0 right-0 flex items-center h-full">
           <button
             onClick={goToNext}
-            className="text-3xl text-green-300 hover:text-green-500 p-2 focus:outline-none"
+            className="text-3xl text-lgreen hover:text-green-500 p-2 focus:outline-none"
           >
             <FaArrowRight />
           </button>
         </div>
-        <div className="fixed bottom-0 left-0 right-0 p-4 bg-green-300 dark:bg-gray-800 text-white translate-y-24 rounded-b-xl">
-          <div className="mb-2 text-xl font-bold text-gray-800 dark:text-white text-center">
+        <div className="fixed bottom-0 left-0 right-0 p-4 bg-lgreen dark:bg-lgreen text-dgreen translate-y-24 rounded-b-xl">
+          <div className="mb-2 text-xl font-russo text-dgreen dark:text-dgreen text-center">
             {images[currentIndex].title}
           </div>
-          <div className="text-xl text-gray-800 dark:text-white text-center mx-2">
+          <div className="text-xl text-gray-800 font-osw dark:text-dgreen text-center mx-2">
             {images[currentIndex].description}
           </div>
         </div>

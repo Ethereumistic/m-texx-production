@@ -103,14 +103,14 @@ export default function Lokacii({  }) {
             </div>
 
             <div className='sm:translate-y-2 md:translate-y-2 lg:-translate-y-[800px] xl:-translate-y-[800px] 2xl:-translate-y-[800px] sm:relative md:relative lg:fixed xl:fixed 2xl:fixed '>
-            <div className="bg-green-200  dark:bg-gray-800 px-2 rounded-md w-80 sm:w-96 md:w-96 lg:w-72 xl:w-72 2xl:w-72 translate-x-10 sm:translate-x-32 md:translate-x-64 lg:translate-x-0 xl:translate-x-0 2xl:translate-x-0 h-[800px] overflow-auto custom-scrollbar " >
+            <div className="bg-lgreen  dark:bg-lgreen px-2 rounded-md w-80 sm:w-96 md:w-96 lg:w-72 xl:w-72 2xl:w-72 translate-x-10 sm:translate-x-32 md:translate-x-64 lg:translate-x-0 xl:translate-x-0 2xl:translate-x-0 h-[800px] overflow-auto custom-scrollbar " >
 
-<h2 className="text-2xl pl-20 font-bold mt-4 mb-6">Локации</h2>
+<h2 className="text-xl pl-20 text-dgreen font-russo mt-4 mb-6">Локации</h2>
 <ul className=''>
   {uniqueCityNames.map((cityName, index) => (
-    <li key={index} className=" pl-16 py-2 border-white border  w-full">
+    <li key={index} className=" pl-16 py-2 border-dgreen border  w-full">
       <div
-        className="flex items-center font-bold cursor-pointer hover:text-green-400 text-green-900 dark:text-gray-300"
+        className="flex items-center font-russo cursor-pointer hover:text-green-400 text-dgreen dark:text-dgreen"
         onClick={() => handleCityClick(cityName)}
         onTouchStart={() => handleCityClick(cityName)}
          >
@@ -123,13 +123,13 @@ export default function Lokacii({  }) {
         )}
       </div>
       {selectedCity === cityName && (
-        <ol className="ml-4  cursor-pointer">
+        <ol className="ml-4  cursor-pointer ">
           {markers
             .filter((marker) => marker.city === cityName)
             .map((marker, index) => (
                 <li
                 key={index}
-                className="mb-1 list-decimal cursor-pointer"
+                className="mb-1 list-decimal cursor-pointer text-dgreen dark:text-dgreen font-osw "
                 onClick={() => handleLocationClick(marker.popUp)}
                 onTouchStart={() => handleLocationClick(marker.popUp)}
                 >

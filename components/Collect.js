@@ -49,43 +49,46 @@ const Collect = () => {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center text-center bg-green-300 mb-2">
-      <h2 className="text-2xl xl:text-4xl font-bold text-black my-4">Събираме</h2>
+    <div className="flex flex-col items-center justify-center text-center bg-lgreen mb-2 pb-4">
+      <h2 className="text-2xl xl:text-4xl font-russo text-dgreen my-4  ">Събираме</h2>
       <div className="flex flex-wrap justify-center">
         {collectY.map((item, index) => (
           <div
             key={index}
-            className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 p-2 "
+            className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 p-4 hover:scale-125 transition-transform duration-300 transform"
           >
             <Image
               src={item.src}
               alt={`Image ${index + 1}`}
               width={200}
               height={200}
+              className=''
             />
-            <h3 className="text-xl text-black mb-2">{item.title}</h3>
+            <h3 className="text-xl font-russo text-dgreen mb-2">{item.title}</h3>
           </div>
         ))}
       </div>
     </div>
 
-    <div className="flex flex-col items-center justify-center text-center bg-red-300">
-      <h2 className="text-2xl xl:text-4xl font-bold text-black my-4">Моля, не изхвърляйте
+    <div className="flex flex-col items-center justify-center text-center bg-lred pb-4">
+      <h2 className="text-2xl xl:text-4xl font-russo text-dred my-4">Моля, не изхвърляйте
 </h2>
       <div className="flex flex-wrap justify-around ">
         {collectN.map((item, index) => (
           <div
             key={index}
-            className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 p-2 "
+            className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 p-4 hover:scale-125 transition-transform duration-300 transform"
           >
             <Image
               src={item.src}
               alt={`Image ${index + 1}`}
               width={200}
               height={200}
+              className=' '
             />
-            <h3 className="text-xl text-black mb-2">{item.title}</h3>
+            <h3 className="text-xl font-russo text-dred">{item.title}</h3>
           </div>
+          
         ))}
       </div>
     </div>

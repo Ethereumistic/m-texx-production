@@ -107,7 +107,7 @@ const Rac = () => {
             <FaArrowRight />
           </button>
         </div>
-        <div className="fixed bottom-0 left-0 right-0 p-4 bg-green-300 dark:bg-gray-800 text-white translate-y-24 rounded-b-xl">
+        <div className="fixed bottom-0 left-0 right-0 p-4 bg-green-300 dark:bg-dgreen text-white translate-y-24 rounded-b-xl">
           <div className="mb-2 text-xl font-bold text-gray-800 dark:text-white text-center">
             {images[currentIndex].title}
           </div>

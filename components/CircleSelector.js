@@ -99,10 +99,10 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
               <Image
                 src={src}
                 alt={circle.title}
-                className="w-full h-full object-contain border-green-300 hover:border-green-500 dark:border-gray-500 dark:hover:border-gray-800 border-8 rounded-full"
+                className="w-full h-full object-contain border-lgreen hover:border-green-500 dark:lgreen dark:hover:border-green-500 border-8 rounded-full"
                 layout="fill" // Use the layout property to specify how the image should behave
               />
-                <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 ${circle.id === 5 ? 'translate-y-8' : 'translate-y-14'} dark:text-white text-black font-bold text-center`}>
+                <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 ${circle.id === 5 ? 'translate-y-8' : 'translate-y-14'} dark:text-white text-black font-russo text-center`}>
                   {circle.title}
                 </div>
             </div>
@@ -113,10 +113,10 @@ const CircleSelector = ({ currentIndex, handleCircleClick }) => {
         <Image
           src={theme === "dark" ? newCircle.srcDark : newCircle.src} // Use theme-specific src
           alt="Your New Circle"
-          className="w-full h-full object-contain border-red-300 hover:border-red-500 dark:border-red-800 dark:hover:border-red-500 border-8 rounded-full"
+          className="w-full h-full object-contain border-lred hover:border-red-500 dark:border-red-800 dark:hover:border-red-500 border-8 rounded-full"
           layout="fill"
         />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-10 dark:text-white text-black font-bold text-center">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-10 dark:text-white text-black font-russo text-center">
             {newCircle.title}
         </div>
         <div className='rotate-45 mt-[100px]'>

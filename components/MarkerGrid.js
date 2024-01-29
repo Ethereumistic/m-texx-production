@@ -61,28 +61,29 @@ const MarkerGrid = ({ markers }) => {
   };
 
   return (
-    <div>
+    <div className='mb-8'>
       
       <div className='text-center'>
         
       </div>
-    <div className="border p-4 -mx-16 sm:-mx-16 md:-mx-16 lg:-mx-0 xl:-mx-0 z-20 -translate-y-[800px] -translate-x-60 sm:-translate-x-48 md:-translate-x-36 lg:-translate-x-0 xl:-translate-x-0">
+    <div className="border-2 rounded-lg border-dgreen dark:border-lgreen p-4 -mx-16 sm:-mx-16 md:-mx-16 lg:-mx-0 xl:-mx-0 z-20 -translate-y-[800px] -translate-x-60 sm:-translate-x-48 md:-translate-x-36 lg:-translate-x-0 xl:-translate-x-0">
     <CitySearchBox cities={Object.keys(groupedMarkers)} onCitySearch={handleCitySearch} />
     {Object.keys(groupedMarkers).map((city, index) => (
-  <div key={city} className="border p-8 mb-4 " ref={(el) => (cityRefs[city] = el)}>
-          <h2 className="text-4xl text-center mt-2 font-bold mb-2 dark:text-gray-200 ">{city}</h2>
-          <h1 className="text-center text-2xl mt-4 font-black text-gray-500 mb-2">
+  <div key={city} className="border rounded-lg border-dgreen dark:border-lgreen p-8 mb-4 " ref={(el) => (cityRefs[city] = el)}>
+          <h2 className="text-4xl text-center mt-2 font-russo mb-2 dark:text-gray-200 ">{city}</h2>
+          <h1 className="text-center text-2xl mt-4 font-russo text-dgreen dark:text-white mb-2">
             {groupedMarkers[city].length}
           </h1>
-          <h2 className="text-xl font-bold -mb-8 dark:text-gray-200">Адрес:</h2>
-          <h2 className="text-xl text-right font-bold mb-6 dark:text-gray-200 2xl:mr-8 mr-0">GPS:</h2>
+          <h2 className="text-xl font-russo -mb-8 dark:text-white">Адрес:</h2>
+          <h2 className="text-xl text-right font-russo mb-6 dark:text-white 2xl:mr-8 mr-0">GPS:</h2>
           {groupedMarkers[city].map((location, locationIndex) => (
             <div key={locationIndex} className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
 
             {/* COPY ADDRESS BUTTON */}
             <form
               className='mt-2 sm:w-[60px] sm:h-[60px] w-[32px] h-[32px] sm:pl-[14px] pl-[4px] 
-                        border rounded-md
+                        border-2 rounded-md
+                        border-lgreen
                         translate-y-16
                           sm:translate-y-0
                           md:translate-y-0
@@ -90,7 +91,8 @@ const MarkerGrid = ({ markers }) => {
                           xl:translate-y-0
                           2xl:translate-y-0
                           -ml-4
-                          sm:ml-0'
+                          sm:ml-0
+                          text-lgreen'
               onClick={() => {
                 copyToClipboard(location.popUp);
               }}
@@ -116,7 +118,7 @@ const MarkerGrid = ({ markers }) => {
                           lg:-translate-x-2
                           xl:-translate-x-2
                           2xl:-translate-x-4
-                          justify-center p-2 rounded-lg bg-green-300 dark:bg-gray-800 mb-2 text-center transition ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'animate-ping' : ''}`}
+                          justify-center p-2 rounded-lg bg-lgreen dark:lgreen mb-2 text-center transition ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'animate-ping' : ''}`}
               onClick={() => {
                 copyToClipboard(`${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}`);
               }}
@@ -124,14 +126,14 @@ const MarkerGrid = ({ markers }) => {
                 copyToClipboard(`${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}`);
               }}
             >
-              <p className={`mt-2 mb-4 text-left  ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'hidden' : 'block'} dark:text-gray-200 `}>
+              <p className={`mt-2 mb-4 font-russo text-left  ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'hidden' : 'block'} dark:text-dgreen `}>
                 {location.popUp}
               </p>
-              <p className={`text-right sm:-mt-4 sm:mb-2 hover:text-green ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'hidden' : 'block'} dark:text-gray-200`}>
+              <p className={`text-right font-osw sm:-mt-4 sm:mb-2 hover:text-green ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'hidden' : 'block'} dark:text-dgreen`}>
                 {location.geocode[0]}, {location.geocode[1]}
               </p>
               {copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` && (
-                <p className="text-2xl text-green-600 my-2 text-center dark:text-green-300">Адресът и координатите са копирани!</p>
+                <p className="text-3xl font-russo text-dgreen my-[14px] text-center dark:text-dgreen">Копирано!</p>
               )}
             </form>
           
@@ -140,7 +142,8 @@ const MarkerGrid = ({ markers }) => {
               className=' sm:w-[60px] sm:h-[60px] 
                           w-[32px] h-[32px] 
                           sm:pl-[12px] 
-                          border rounded-md 
+                          border-2 rounded-md 
+                          border-lgreen
                           translate-x-60 
                           sm:translate-x-[410px] 
                           -translate-y-24
@@ -155,6 +158,7 @@ const MarkerGrid = ({ markers }) => {
                           2xl:translate-x-64
                           mt-2
                           ml-3
+                          text-lgreen
                           '
               onClick={() => {
                 copyToClipboard(`${location.geocode[0]}, ${location.geocode[1]}`);
@@ -172,7 +176,7 @@ const MarkerGrid = ({ markers }) => {
       ))}
 
 {showPopup && (
-  <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-200 dark:bg-gray-800 py-1 px-4 rounded-lg shadow-lg animate-fade-out">
+  <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-200 dark:bg-dgreen py-1 px-4 rounded-lg shadow-lg animate-fade-out">
     <p className="text-sm dark:text-gray-300">Копирано!</p>
   </div>
 )}
