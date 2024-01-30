@@ -49,7 +49,7 @@ const Collect = () => {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center text-center bg-lgreen mb-2 pb-4">
+    <div className="flex flex-col items-center justify-center text-center bg-lgreen my-8 py-4">
       <h2 className="text-2xl xl:text-4xl font-russo text-dgreen my-4  ">Събираме</h2>
       <div className="flex flex-wrap justify-center">
         {collectY.map((item, index) => (
@@ -70,8 +70,8 @@ const Collect = () => {
       </div>
     </div>
 
-    <div className="flex flex-col items-center justify-center text-center bg-lred pb-4">
-      <h2 className="text-2xl xl:text-4xl font-russo text-dred my-4">Моля, не изхвърляйте
+    <div className="flex flex-col items-center justify-center text-center bg-lred my-8 py-4">
+      <h2 className="text-2xl xl:text-4xl font-russo text-dred my-4">Моля, НЕ изхвърляйте
 </h2>
       <div className="flex flex-wrap justify-around ">
         {collectN.map((item, index) => (

@@ -8,6 +8,8 @@ import { FaHome, FaBriefcase, FaUser, FaCog, FaLightbulb, FaTrophy } from 'react
 import Collect from "@/components/Collect";
 import CircleSelector from "@/components/CircleSelector";
 import ImgCarousel from "@/components/ImgCarousel";
+import HowToCards from "@/components/HowToCards";
+import OurLocations from "@/components/OurLocations";
 
 export default function Post({ posts }) {
   
@@ -46,8 +48,9 @@ export default function Post({ posts }) {
         {/* Mobile Background Video */}
         <video className="-mt-6 brightness-75 md:hidden" src="/img/background2.mp4" autoPlay loop muted playsInline></video>
         {/* Desktop Background Video */}
-        <video className="hidden md:block xl:rounded-lg -mt-6 brightness-75" src="/img/bgvideo.webm" autoPlay loop muted ></video>
-
+        <video className="hidden md:block xl:rounded-lg -mt-6 brightness-75 mx-auto" src="/img/bgvideo.webm" autoPlay loop muted ></video>
+        {/* 4K Video centered for biggest device */}
+        {/* <video className="hidden max-xl:block xl:rounded-lg -mt-6 brightness-75 " src="/img/bgvideo.webm" autoPlay loop muted ></video> */}
 
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-center">
@@ -86,14 +89,14 @@ export default function Post({ posts }) {
         <h1 className='text-2xl xl:text-6xl text-dgreen dark:text-dgreen font-russo text-center py-3 mx-12'>Жизнения цикъл на дрехите и влиянието му върху околната среда</h1>
     </div>
 
-      <ImgCarousel />
+      <ImgCarousel className='' />
 
-      <div className=' w-11/12 mx-auto h-auto bg-lred dark:bg-lred rounded-3xl'>
+      <div className=' w-full mx-auto h-auto bg-lred dark:bg-lred my-4'>
         <h1 className='text-2xl xl:text-4xl text-dred dark:text-dred font-bold text-center py-4 px-2'>Изхвърляне на дрехи в контейнери за общи отпадъци води до замърсяване на околната среда</h1>
     </div>
-
+      <HowToCards />
       <Collect />
-
+      <OurLocations />
     </>
   );
 }
