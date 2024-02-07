@@ -45,19 +45,19 @@ export default function Contact({ settings }) {
 
   return (
     <Container>
-      <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+      <h1 className="mt-2 mb-3 text-3xl font-russo tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl text-dgreen dark:text-white ">
       Свържете се с нас
       </h1>
       <div className="text-center">
-        <p className="text-lg">Тук сме за да помогнем!</p>
+        <p className="text-lg font-osw text-dgreen dark:text-lgreen">Тук сме за да помогнем!</p>
       </div>
 
-      <div className="grid my-10 md:grid-cols-2">
-        <div className="my-10">
-          <h2 className="text-2xl ml-10 font-semibold dark:text-white">
+      <div className="grid my-10 md:grid-cols-2 ">
+        <div className="my-10 dark:bg-lgreen bg-dgreen mx-auto p-8 rounded-lg">
+          <h2 className="text-2xl ml-10 font-russo dark:text-dgreen text-white ">
             M-Texx Textile Recycling
           </h2>
-          <p className="max-w-sm text-center mt-5">
+          <p className="max-w-sm text-center mt-5 font-osw text-white dark:text-dgreen">
           ❓ Имате ли въпрос или притеснение? ❗<br></br>
 
           ✍🏼 Пишете ни и ни уведомете. 📋<br></br>
@@ -68,21 +68,21 @@ export default function Contact({ settings }) {
           </p>
 
           <div className="mt-5 ml-10">
-            <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-              <MapPinIcon className="w-4 h-4" />
+            <div className="flex items-center mt-2 space-x-2 text-white dark:text-dgreen font-osw">
+              <MapPinIcon className="w-8 h-8" />
               <span>Индустриална 44, Габрово 5302, България</span>
             </div>
             {settings?.email && (
-              <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                <EnvelopeIcon className="w-4 h-4" />
+              <div className="flex items-center mt-2 space-x-2 text-white dark:text-dgreen font-osw">
+                <EnvelopeIcon className="w-8 h-8" />
                 <a href={`mailto:${settings.email}`}>
                   {settings.email}
                 </a>
               </div>
             )}
             {settings?.phone && (
-              <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                <PhoneIcon className="w-4 h-4" />
+              <div className="flex items-center mt-2 space-x-2 text-white dark:text-dgreen font-osw">
+                <PhoneIcon className="w-8 h-8" />
                 <a href={`tel:${settings.phone}`}>{settings.phone}</a>
               </div>
             )}
@@ -105,7 +105,7 @@ export default function Contact({ settings }) {
                 className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
                   errors.name
                     ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
-                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0 font-osw"
                 }`}
                 {...register("name", {
                   required: "Нужно е пълното Ви име.",
@@ -131,8 +131,8 @@ export default function Contact({ settings }) {
                 autoComplete="false"
                 className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
                   errors.email
-                    ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
-                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                    ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0 "
+                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0 font-osw"
                 }`}
                 {...register("email", {
                   required: "Напишете Вашият имейл адрес.",
@@ -149,14 +149,14 @@ export default function Contact({ settings }) {
               )}
             </div>
 
-            <div className="mb-3">
+            <div className="mb-3 ">
               <textarea
                 name="message"
                 placeholder="Търсите нещо специално? Информирай ни!"
                 className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  ${
                   errors.message
-                    ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
-                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                    ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0 font-osw"
+                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0 "
                 }`}
                 {...register("message", {
                   required: "Напишете повече за Вашата идея..."
@@ -172,7 +172,7 @@ export default function Contact({ settings }) {
 
             <button
               type="submit"
-              className="w-full py-4 font-semibold text-white transition-colors bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7 dark:bg-white dark:text-black ">
+              className="w-full py-4 text-dgreen hover:text-white font-russo transition-colors bg-lgreen rounded-md hover:bg-dgreen  px-7 dark:bg-white dark:text-dgreen dark:hover:bg-lgreen ">
               {isSubmitting ? (
                 <svg
                   className="w-5 h-5 mx-auto text-white dark:text-black animate-spin"

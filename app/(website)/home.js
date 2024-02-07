@@ -92,7 +92,7 @@ export default function Post({ posts }) {
       <ImgCarousel className='' />
 
       <div className=' w-full mx-auto h-auto bg-lred dark:bg-lred my-4'>
-        <h1 className='text-2xl xl:text-4xl text-dred dark:text-dred font-bold text-center py-4 px-2'>Изхвърляне на дрехи в контейнери за общи отпадъци води до замърсяване на околната среда</h1>
+        <h1 className='text-2xl xl:text-4xl text-dred dark:text-dred font-russo text-center py-4 px-2'>Изхвърляне на дрехи в контейнери за общи отпадъци води до замърсяване на околната среда</h1>
     </div>
       <HowToCards />
       <Collect />

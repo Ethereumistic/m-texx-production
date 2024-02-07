@@ -80,7 +80,7 @@ export default function PostList({
                   : "text-lg",
                 fontWeight === "normal"
                   ? "line-clamp-2 font-medium  tracking-normal text-black"
-                  : "font-semibold leading-snug tracking-tight",
+                  : "font-russo leading-snug tracking-tight",
                 "mt-2    dark:text-white"
               )}>
               <Link

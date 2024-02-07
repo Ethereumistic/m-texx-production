@@ -63,12 +63,12 @@ export default function Post({ posts: initialposts }) {
   return (
     <>
       <Container>
-        <h1 className="text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-          Archive
+        <h1 className="text-center text-3xl font-russo tracking-tight text-dgreen dark:text-white lg:text-4xl lg:leading-snug">
+          Архив
         </h1>
         <div className="text-center">
-          <p className="mt-2 text-lg">
-            See all posts we have ever written.
+          <p className="mt-2 text-lg font-osw text-dgreen dark:text-lgreen">
+            Виж всички статии, които сме написали.
           </p>
         </div>
         {posts && posts?.length === 0 && (

@@ -4,8 +4,16 @@ import Image from 'next/image';
 import { FaLightbulb } from 'react-icons/fa';
 import Pollution from '@/components/pollution';
 import Curious from '@/components/curious';
+import Economy from '@/components/Economy';
+import Process from '@/components/Process';
+import Technology from '@/components/Technology';
 
 const Recycling = () => {
+
+  const image = '/img/economy/economy.png';
+  const leftText = 'This is the text that will be displayed when the left side of the image is clicked.';
+  const rightText = 'This is the text that will be displayed when the right side of the image is clicked.';
+
   return (
     <div>
       <Pollution />
@@ -45,6 +53,13 @@ const Recycling = () => {
       
       <Curious />
       
+      <div className='w-full h-auto bg-lgreen dark:bg-lgreen my-8'>
+        <h1 className='text-2xl xl:text-6xl text-dgreen dark:text-dgreen font-russo text-center py-3 mx-12'>НАЧИНИ ЗА НАМАЛЯВАНЕ НА ЗАМЪРСЯВАНЕTO ОТ ТЕКСТИЛНИ ОТПАДЪЦИ</h1>
+    </div>
+
+    <Economy image={image} leftText={leftText} rightText={rightText}/>
+    <Process />
+    <Technology image={image} leftText={leftText} rightText={rightText}/>            
     </div>
   );
 };
