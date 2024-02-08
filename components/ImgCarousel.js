@@ -2,39 +2,41 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import CircleSelector from 'components/CircleSelector';
+import Image from 'next/image';
+
 const images = [
   {
-    src: '/img/carousel/recycling-crop.png',
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/carousel/recycling-crop.png',
     title: 'Рециклиране',
     description: 'След съответното третиране сортираните дрехи могат да бъдат повторно използвани като дрехи втора употреба, парцали за почистване,рециклирани влакна, изолационни материали и пълнежи или като алтернативно гориво в специални инсталации на енергоемки производства.',
   },
   {
-    src: '/img/carousel/production.png',
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/carousel/production.png',
     title: 'Продукция',
     description: 'За производството на килограм памук, еквивалентен на теглото на една мъжка риза и чифт дънки, са нужни между 10 000 и 20 000 литра вода. Една четвърт от световното потребление на пестициди се пада на производителите на памук, а енергията, вложена в целия жизнен цикъл на дрехите, употребени в ЕС, е генерирала 195 млн. тона СО2 за година.',
   },
   {
-    src: '/img/carousel/selling.jpg',
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/carousel/selling.jpg',
     title: 'Продажби',
     description: '„Бързата мода“ е водещ бизнес модел. Хората купуват все повече дрехи, като в ЕС количествата достигат до 6,4 млн. тона годишно. Огромното мнозинство купува нови дрехи; едва 6 % от хората въобще се замислят за дрехи втора употреба.',
   },
   {
-    src: '/img/carousel/wear.jpg',
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/carousel/wear.jpg',
     title: 'Употреба',
     description: 'Средният потребител днес купува 60% повече дрехи и ги използва 50% по-малко време в сравнение с преди 15 години. Дрехите в Европейския съюз обикновено издържат между 3 и 4 години, а удвояването на този период от една на две години намалява годишните емисии на CO2 с 24%.',
   },
   {
-    src: '/img/carousel/container-crop.jpg',
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/carousel/container-crop.jpg',
     title: 'Оставяне в контейнер',
     description: 'Завършването на текстилния цикъл изисква алтернативен начин за избавяне от старите дрехи. На тази нужда могат да отговорят специалните контейнери за оставяне на дрехи и обувки.',
   },
   {
-    src: 'img/carousel/sorting.jpg',
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/carousel/sorting.jpg',
     title: 'Сортиране',
     description: 'Събраните текстилни изделия се сортират в специални съоръжения в зависимост от предполагаемата им бъдеща употреба. Всяка отделна дреха се преценява според йерархията в политиката за предотвратяване и управление на отпадъците.',
   },
   {
-    src: 'img/carousel/trash.webp',
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/carousel/trash.webp',
     title: 'Изхвърляне на боклука',
     description: 'Събраните текстилни изделия се сортират в специални съоръжения в зависимост от предполагаемата им бъдеща употреба. Всяка отделна дреха се преценява според йерархията в политиката за предотвратяване и управление на отпадъците.',
   },
@@ -78,10 +80,12 @@ const ImgCarousel = () => {
                     -translate-y-[520px] sm:-translate-y-[520px] md:-translate-y-[520px] lg:-translate-y-[510px] xl:-translate-y-0">
 
           {images.map((image, index) => (
-            <img
+            <Image
               key={index}
               src={image.src}
               alt={`Carousel Image ${index + 1}`}
+              width={300}
+              height={300}
               className={`absolute h-full w-full transition-opacity rounded-t-xl ${
                 index === currentIndex ? 'opacity-100' : 'opacity-0'
               }`}

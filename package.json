@@ -43,8 +43,10 @@
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
     "react-refractor": "^2.1.7",
+    "react-slick": "^0.30.1",
     "sanity": "^3.9.0",
     "sanity-plugin-asset-source-unsplash": "^1.0.6",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9",
     "swr": "^2.1.2",
     "typescript": "^5.0.4"
