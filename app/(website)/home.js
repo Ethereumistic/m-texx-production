@@ -98,6 +98,7 @@ export default function Post({ posts }) {
       <HowToCards />
       <Collect />
       <OurLocations />
+
     </>
   );
 }

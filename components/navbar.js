@@ -62,7 +62,7 @@ export default function Navbar(props) {
     },
     {
       label: "Новини",
-      href: "/news",
+      href: "/archive",
       external: false,
       badge: "new"
     },
