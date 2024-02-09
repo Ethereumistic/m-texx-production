@@ -61,23 +61,20 @@ export default function Post({ posts: initialposts }) {
     <>
       <Container>
         <h1 className="text-center text-3xl font-russo tracking-tight text-dgreen dark:text-white lg:text-4xl lg:leading-snug">
-          Новини
+          Архив
         </h1>
-        <div className="text-center my-8">
+        <div className="text-center">
           <p className="mt-2 text-lg font-osw text-dgreen dark:text-lgreen">
             Виж всички статии, които сме написали.
           </p>
         </div>
-        <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
-            {posts.slice(0, 2).map(post => (
-              <PostList
-                key={post._id}
-                post={post}
-                aspect="landscape"
-                preloadImage={true}
-              />
-            ))}
+        {posts && posts?.length === 0 && (
+          <div className="flex h-40 items-center justify-center">
+            <span className="text-lg text-gray-500">
+              End of the result!
+            </span>
           </div>
+        )}
 
         {isValidating && (
           <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
@@ -95,25 +92,25 @@ export default function Post({ posts: initialposts }) {
             ))}
           </div>
         )}
-        <div className="mt-10 flex items-center justify-center ">
+        <div className="mt-10 flex items-center justify-center">
           <nav
             className="isolate inline-flex -space-x-px rounded-md shadow-sm"
             aria-label="Pagination">
             <button
               disabled={isFirstPage}
               onClick={handlePrevPage}
-              className=" mx-8 relative inline-flex items-center gap-1 rounded-l-md border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-dgreen hover:bg-lgreen focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-lgreen dark:bg-dgreen dark:hover:bg-lgreen dark:text-white dark:hover:text-dgreen">
+              className="relative inline-flex items-center gap-1 rounded-l-md border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-dgreen dark:text-gray-300">
               <ChevronLeftIcon
                 className="h-3 w-3"
                 aria-hidden="true"
               />
-              <span>Назад</span>
+              <span className="font-osw">Назад</span>
             </button>
             <button
               onClick={handleNextPage}
               disabled={isLastPage}
-              className="mx-8 relative inline-flex items-center gap-1 rounded-r-md border border-dgreen bg-white px-3 py-2 pl-4 text-sm font-medium text-dgreen hover:bg-lgreen focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-lgreen dark:bg-dgreen dark:hover:bg-lgreen dark:text-white dark:hover:text-dgreen">
-              <span>Напред</span>
+              className="relative inline-flex items-center gap-1 rounded-r-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-dgreen dark:text-gray-300">
+              <span className="font-osw">Напред</span>
               <ChevronRightIcon
                 className="h-3 w-3"
                 aria-hidden="true"
