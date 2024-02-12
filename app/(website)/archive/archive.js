@@ -61,7 +61,7 @@ export default function Post({ posts: initialposts }) {
     <>
       <Container>
         <h1 className="text-center text-3xl font-russo tracking-tight text-dgreen dark:text-white lg:text-4xl lg:leading-snug">
-          Архив
+          Новини
         </h1>
         <div className="text-center">
           <p className="mt-2 text-lg font-osw text-dgreen dark:text-lgreen">
