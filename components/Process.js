@@ -6,7 +6,7 @@ const Process = () => {
   const CirclePollution = [
     {
       src: '/img/process/container-mtexx.png',
-      title: 'Изхвърляне на текстил в контейнери',
+      title: 'Оставяне на текстил в контейнери',
     },
     {
       src: '/img/process/collect-mtexx.png',
@@ -21,19 +21,19 @@ const Process = () => {
 
   const HoverPollution = [
     {
-      src: '/img/pollution/water-use-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/1.png',
       title: 'СТЪКЛО',
     },
     {
-      src: '/img/pollution/water-pollution-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/2.png',
       title: 'ХАРТИЯ',
     },
     {
-      src: '/img/pollution/air-pollution-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/3.png',
       title: 'МЕТАЛ',
     },
     {
-      src: '/img/pollution/landfield-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/4.png',
       title: 'БИТОВ ОТПАДЪК',
     },
   ];
@@ -62,7 +62,7 @@ const Process = () => {
 
 
 
-      <div className="w-[900px] h-2 flex items-center justify-between bg-white my-8 mt-32 ">
+      <div className="w-[900px] h-2 flex items-center justify-between bg-white my-8 mt-32 -translate-x-24">
         
             <span className="h-8 w-8 rounded-full bg-lgreen border-white border-4"></span>
             <span className="h-8 w-8 rounded-full bg-lgreen border-white border-4">
@@ -89,7 +89,7 @@ const Process = () => {
                 </div>
             </div>
 
-            <div className="w-[100px] h-2 rotate-[45deg] bg-white translate-y-8 rounded-md">
+            <div className="w-[100px] h-2 rotate-[45deg] bg-white translate-y-8 rounded-md ">
             <div className='hover:scale-110 transition duration-300'>
             <Image
                 className="rounded-full border-4 border-lgreen translate-x-36 -translate-y-10 rotate-[-45deg] scale-[2] "
@@ -108,7 +108,7 @@ const Process = () => {
         </div>
 
 
-        <div className="flex flex-wrap justify-center ">
+        <div className="flex flex-wrap justify-center mr-44">
           {CirclePollution.map((item, index) => (
             <div
               key={index}
@@ -127,7 +127,7 @@ const Process = () => {
                 width={200}
                 height={200}
                 layout="fixed"
-                className={`rounded-full ${
+                className={`rounded-full cursor-pointer ${
                   activeCircle === index ? 'border-lgreen border-8' : ''
                 } transition-all duration-300`}
               />

@@ -223,7 +223,7 @@ export default function Navbar(props) {
               </div>
               </div>
               <Disclosure.Panel onBlur={() => open && setMenuOpen(false)} >
-                <div className="order-2 text-center bg-slate-50	dark:bg-gray-600 rounded-2xl -ml-2 mt-8 flex w-1/2 flex-col items-center justify-start md:hidden">
+                <div className="order-2 text-center bg-dgreen	dark:bg-lgreen rounded-2xl -ml-2 mt-8 flex w-1/2 flex-col items-center justify-start md:hidden">
                   {mobilemenu.map((item, index) => (
                     <Fragment key={`${item.label}${index}`}>
                       {item.children && item.children.length > 0 ? (
@@ -239,7 +239,7 @@ export default function Navbar(props) {
                         onClick={() => open && setMenuOpen(false)}
                           href={item.href}
                           key={`${item.label}${index}`}
-                          className="w-full px-5 py-2.5 text-sm font-bold text-gray-600 hover:text-green-500 dark:text-white"
+                          className="w-full px-5 py-2.5 text-sm font-bold text-white hover:text-green-500 dark:text-dgreen"
                           target={item.external ? "_blank" : ""}
                           rel={item.external ? "noopener" : ""}>
                           {item.label}

@@ -1,6 +1,7 @@
 "use state";
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Druzet = () => {
   const CirclePollution = [
@@ -25,19 +26,19 @@ const Druzet = () => {
 
   const HoverPollution = [
     {
-      src: '/img/pollution/water-use-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/druzet/automob.png',
       title: 'СТЪКЛО',
     },
     {
-      src: '/img/pollution/water-pollution-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/druzet/isolation.png',
       title: 'ХАРТИЯ',
     },
     {
-      src: '/img/pollution/air-pollution-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/druzet/matress.png',
       title: 'МЕТАЛ',
     },
     {
-      src: '/img/pollution/landfield-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/druzet/chair.png',
       title: 'БИТОВ ОТПАДЪК',
     },
   ];
@@ -59,16 +60,23 @@ const Druzet = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center text-center bg-dgreen my-4 py-4 border-t-2 border-b-2 border-dashed border-white dark:border-lgreen">
+      <div className="flex flex-col items-center justify-center 
+                      text-center bg-dgreen my-4 py-4 border-t-2 
+                      border-b-2 border-dashed border-white dark:border-lgreen
+                      
+                      ">
 
       <h3 className="text-2xl xl:text-4xl font-russo text-white my-10  "> Какво се прави от Друзет?</h3>
         {/* <h1 className="text-xl xl:text-2xl font-osw text-lgreen my-2  "> ВЛИЯНИЕТО ВЪРХУ ОКОЛНАТА СРЕДА </h1> */}
 
 
 
-      <div className="w-[1500px] h-2 flex items-center justify-between bg-white my-8 mt-32 -translate-x-24">
+      <div className="w-[1500px] h-2  items-center justify-between bg-white my-8 mt-32 -translate-x-24 flex">
+      <Link href="/post/kakvi-produkti-mogat-da-se-szdadat-ot-recikliran-tekstil"
+                className='cursor-pointer'>
         <div className='hover:scale-110 transition duration-300'>
             <h3 className="text-5xl font-russo text-white  fixed translate-x-16 translate-y-80">Друзет</h3>
+            
                 <Image
                     className="rounded-full border-4 border-lgreen "
                     src="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/druzet/druz.png" // Replace with your image path
@@ -77,6 +85,7 @@ const Druzet = () => {
                     height={300}
                     /> 
         </div>
+        </Link>
             <span className="h-8 w-8 rounded-full bg-lgreen border-white border-4">
             <div className='h-64 w-1 border-white border-dashed border-2 translate-x-[11px] translate-y-8'></div>
             </span>
@@ -147,7 +156,7 @@ const Druzet = () => {
                 width={200}
                 height={200}
                 layout="fixed"
-                className={`rounded-full  ${
+                className={`rounded-full cursor-pointer ${
                   activeCircle === index ? 'border-lgreen border-8' : ''
                 } transition-all duration-300`}
               />

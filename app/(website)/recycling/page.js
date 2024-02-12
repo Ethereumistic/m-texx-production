@@ -58,7 +58,21 @@ const Recycling = () => {
     </div>
 
     <Economy image={image} leftText={leftText} rightText={rightText}/>
+
+    <div className='hidden md:block'>
     <Process />
+    </div>
+
+    <div className='block md:hidden mx-auto'>
+    <Image
+                    className=""
+                    src="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/process-graph.png" // Replace with your image path
+                    alt="reusing textile"
+                    width={1300}
+                    height={300}
+                    /> 
+    </div>
+
     <Technology image={image} leftText={leftText} rightText={rightText}/>            
     </div>
   );

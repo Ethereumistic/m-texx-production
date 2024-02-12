@@ -25,7 +25,33 @@ const Partners = () => {
             </div>
         </div>
 
+        {/* DESKTOP */}
+            <div className="hidden md:block">
             <Druzet  />
+            </div>
+
+        {/* PHONE */}
+        <Link href="/post/kakvi-produkti-mogat-da-se-szdadat-ot-recikliran-tekstil"
+                className='cursor-pointer'>
+            <div className="block md:hidden">
+                <div className="flex flex-col items-center justify-center 
+                      text-center bg-dgreen my-4 py-4 border-t-2 
+                      border-b-2 border-dashed border-white dark:border-lgreen
+                      
+                      ">
+
+                    <h3 className="text-2xl xl:text-4xl font-russo text-white my-10  "> Какво се прави от Друзет?</h3>
+                    <Image
+                    className=""
+                    src="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/druzet/druzet-graph.png" // Replace with your image path
+                    alt="reusing textile"
+                    width={500}
+                    height={300}
+                    />
+                </div>
+            </div>
+        </Link>
+
             <DruzSlider />
 
 

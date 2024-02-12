@@ -37,19 +37,19 @@ const Technology = () => {
           {accordion1Open && (
             <div className="my-4 bg-white dark:bg-dgreen p-4 rounded-lg transition-all duration-300">
               {/* Content for Accordion 1 */}
-              <p className="text-dgreen dark:text-white ">Във високотехнологичните фабрики за механично рециклиране на текстил се използват роботи с изкуствен интелект, които са програмирани да разпознават и сортират текстилните отпадъци с по-голяма точност от човек.</p>
+              <p className="text-dgreen dark:text-white font-osw">Във високотехнологичните фабрики за механично рециклиране на текстил се използват роботи с изкуствен интелект, които са програмирани да разпознават и сортират текстилните отпадъци с по-голяма точност от човек.</p>
             </div>
           )}
         </div>
 
-        <div className="bg-dgreen dark:bg-lgreen rounded-lg p-4 w-[320px] sm:w-[410px] h-full">
+        <div className="bg-dgreen dark:bg-lgreen rounded-lg p-4 w-[320px] sm:w-[410px] h-full ">
         <SlChemistry className='mx-auto text-lgreen dark:text-dgreen ' size={48}/>
           <p className="text-white text-lg sm:text-xl dark:text-dgreen font-osw text-center">Химичното рециклиране използва химикали, за да разгради текстилните материали на молекуларно ниво. Процесът включва химически реакции, които отделят полимерните вериги и позволяват възстановяването на влакната. Този метод е по-ефективен при запазването на качеството на текстила в сравнение с механичното рециклиране, но може да изисква по-големи инвестиции в енергия и ресурси.</p>
           <MdOutlineArrowDropDown className='mx-auto text-lgreen dark:text-dgreen' size={48} onClick={toggleAccordion2}/>
           {accordion2Open && (
             <div className="my-4 bg-white dark:bg-dgreen p-4 rounded-lg transition-all duration-300">
               {/* Content for Accordion 1 */}
-              <p className="text-dgreen dark:text-white">При химичното рециклиране на текстил могат да се използват биохимикали, които създават специфични &quot;разтвори&quot;, наподобяващи естествените процеси на разграждане, за да възстановят влакната с минимални потребности за вода и енергия.</p>
+              <p className="text-dgreen dark:text-white font-osw">При химичното рециклиране на текстил могат да се използват биохимикали, които създават специфични &quot;разтвори&quot;, наподобяващи естествените процеси на разграждане, за да възстановят влакната с минимални потребности за вода и енергия.</p>
             </div>
           )}
         </div>
@@ -61,7 +61,7 @@ const Technology = () => {
           {accordion3Open && (
             <div className="my-4 bg-white dark:bg-dgreen p-4 rounded-lg transition-all duration-300">
               {/* Content for Accordion 1 */}
-              <p className="text-dgreen dark:text-white">Някои от микроорганизмите, използвани в биологичното рециклиране на текстил, са открити в екстремни условия, като вулканични извори или дълбоки морски ровове, демонстрирайки удивителната адаптивност на живота в природата.</p>
+              <p className="text-dgreen dark:text-white font-osw">Някои от микроорганизмите, използвани в биологичното рециклиране на текстил, са открити в екстремни условия, като вулканични извори или дълбоки морски ровове, демонстрирайки удивителната адаптивност на живота в природата.</p>
             </div>
           )}
         </div>
