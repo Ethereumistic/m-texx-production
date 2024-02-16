@@ -81,10 +81,10 @@ export default function Lokacii({  }) {
                     {markers.map((marker, index) => (
                     <Marker key={index} position={marker.geocode} icon={customIcon}>
                     <Popup>
-                        <div>
-                            <p>{marker.city}</p>
-                            <p>{marker.popUp}</p>
-                            <p>
+                        <div className=''>
+                            <p className='font-russo text-3xl text-center text-lgreen bg-dgreen rounded-full py-2'>{marker.city}</p>
+                            <p className='font-osw text-lg text-center text-dgreen'>{marker.popUp}</p>
+                            <p className='font-osw text-lg text-center text-dgreen'>
                                 {marker.geocode[0].toFixed(6)} {marker.geocode[1].toFixed(6)}
                             </p>
                         </div>
@@ -110,7 +110,7 @@ export default function Lokacii({  }) {
   {uniqueCityNames.map((cityName, index) => (
     <li key={index} className=" pl-16 py-2 border-dgreen border  w-full">
       <div
-        className="flex items-center font-russo cursor-pointer hover:text-green-400 text-dgreen dark:text-dgreen"
+        className="flex items-center font-russo cursor-pointer hover:scale-105 active:scale-105 transition duration-300 text-dgreen dark:text-dgreen"
         onClick={() => handleCityClick(cityName)}
         onTouchStart={() => handleCityClick(cityName)}
          >

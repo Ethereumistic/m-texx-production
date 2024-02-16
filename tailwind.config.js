@@ -7,11 +7,11 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
-  darkMode: "class", // or 'media' or 'class' stariq lgreen: #7ab842
+  darkMode: "class", // or 'media' or 'class' stariq lgreen: #7ab842  toxic lgreen: #5fd914   nov lgreen: #88d498  yellow green: #A1C349 pistacho: #8acb88
   theme: {
     extend: {
       colors: {
-        lgreen: " #5fd914 ", 
+        lgreen: " #88d498 ", 
         dgreen: " #172e08 ",
         lred: " #DB5C84 ",
         dred: " #4C0414 "

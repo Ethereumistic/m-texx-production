@@ -58,7 +58,9 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cx(inter.variable, lora.variable, rubik.variable, russo.variable, osw.variable)}>
       <body className="antialiased text-gray-800 dark:bg-dgreen dark:text-gray-400 transition duration-400">
+        <main>
         <Providers>{children}</Providers>
+        </main>
       </body>
     </html>
   );

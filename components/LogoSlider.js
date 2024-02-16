@@ -8,54 +8,378 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const logos = [
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/burgas.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/gabrovo.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/dryanovo.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/byala.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/debelec.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/dimitrovgrad.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/nova-zagora.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pleven.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/plovdiv.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/razgrad.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/ruse.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/shumen.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/sliven.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/smolyan.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/sozopol.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/targovishte.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/v-tarnovo.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/yambol.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/hisarya.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/dve-mogili.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/banite.png'
-  // Add all your image URLs here
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/1-aprilci.png',
+    title: 'Априлци',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/2-ardino.png',
+    title: 'Ардино',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/3-banite.png',
+    title: 'Баните',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/4-bolqrovo.png',
+    title: 'Болярово',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/5-borino.png',
+    title: 'Борино',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/6-bqla.png',
+    title: 'Бяла',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/7-v-preslav.png',
+    title: 'Велики Преслав',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/8-v-tarnovo.png',
+    title: 'Велико Търново',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/9-vetovo.png',
+    title: 'Ветово',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/10-vraca.png',
+    title: 'Враца',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/11-gorna-orqhovica.png',
+    title: 'Горна Оряховица',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/12-dve-mogili.png',
+    title: 'Две Могили',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/13-dimitrovgrad.png',
+    title: 'Димитровград',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/14-drqnovo.png',
+    title: 'Дряново',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/15-etropole.png',
+    title: 'Етрополе',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/16-zlatograd.png',
+    title: 'Златоград',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/17-zlatica.png',
+    title: 'Златица',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/18-kazanluk.png',
+    title: 'Казанлък',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/19-kalofer.png',
+    title: 'Калофер',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/20-kaloqnovo.png',
+    title: 'Калояново',
+    width: '100',
+    height: '100',
+    
+  },
 ];
 
 const logoz = [
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/1.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/2.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/3.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/4.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/5.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/6.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/7.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/8.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/9.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/10.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/11.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/12.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/13.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/14.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/15.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/16.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/17.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/18.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/bolyarovo.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/kilifarevo.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/2/kalofer.png',
-  // Add all your image URLs here
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/21-karlovo.png',
+    title: 'Карлово',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/22-karnobat.png',
+    title: 'Карнобат',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/23-kneja.png',
+    title: 'Кнежа',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/24-krumovgrad.png',
+    title: 'Крумовград',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/25-lovech.png',
+    title: 'Ловеч',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/26-lubimec.png',
+    title: 'Любимец',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/27-momchilovgrad.png',
+    title: 'Момчиловград',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/28-madan.png',
+    title: 'Мадан',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/29-nova-zagora.png',
+    title: 'Нова Загора',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/30-nesebar.png',
+    title: 'Несебър',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/31-pavlikeni.png',
+    title: 'Павликени',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/32-panagiurishte.png',
+    title: 'Панагюрище',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/33-pavel-banq.png',
+    title: 'Павел Баня',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/34-pirdop.png',
+    title: 'Пирдоп',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/35-pleven.png',
+    title: 'Плевен',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/36-plovdiv.png',
+    title: 'Пловдив',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/37-popovo.png',
+    title: 'Попово',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/38-pravec.png',
+    title: 'Правец',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/39-polski.png',
+    title: 'Полски Тръмбеш',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/40-radnevo.png',
+    title: 'Раднево',
+    width: '100',
+    height: '100',
+  },
 ];
+
+const logox = [
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/41-razgrad.png',
+    title: 'Разград',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/42-ruse.png',
+    title: 'Русе',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/43-svishtov.png',
+    title: 'Свищов',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/44-sevlievo.png',
+    title: 'Севлиево',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/45-sliven.png',
+    title: 'Сливен',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/46-smolqn.png',
+    title: 'Смолян',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/47-smqdovo.png',
+    title: 'Смядово',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/48-sopot.png',
+    title: 'Сопот',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/49-sofia.png',
+    title: 'София',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/50-strelcha.png',
+    title: 'Стрелча',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/51-troqn.png',
+    title: 'Троян',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/52-trqvna.png',
+    title: 'Трявна',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/53-turgovishte.png',
+    title: 'Търговище',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/54-ugurchin2.png',
+    title: 'Угърчин',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/55-haskovo.png',
+    title: 'Хасково',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/56-hisarq.png',
+    title: 'Хисаря',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/57-cenovo.png',
+    title: 'Ценово',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/58-chepelare.png',
+    title: 'Чепеларе',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/59-shumen.png',
+    title: 'Шумен',
+    width: '100',
+    height: '100',
+  },
+  {
+    src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/60-qmbol.png',
+    title: 'Ямбол',
+    width: '100',
+    height: '100',
+    
+  },
+];
+
+
+
 
 const LogoSlider = () => {
     const [settings] = useState({
@@ -73,27 +397,31 @@ const LogoSlider = () => {
 <>
 <h2 className="text-2xl xl:text-4xl font-russo text-dgreen dark:text-white mb-8 text-center ">Нашите партньори</h2>
 
-      <div className='hidden md:block p-8 mx-96 mt-8 bg-lgreen rounded-tl-3xl rounded-tr-3xl border-t-4 border-x-4 border-dgreen'>
+      <div className='hidden md:block p-8 mx-96 mt-8 bg-lgreen rounded-3xl border-4 border-dgreen'>
       <h2 className="text-2xl xl:text-4xl font-osw text-dgreen mb-8 text-center ">Общини</h2>
 
-      <Slider {...settings} className="">
-        {logos.map((logo2, index) => (
+      {/* Desktop slider 1 */}
+      <Slider {...settings} className="my-8">
+        {logos.map((logo, index) => (
           <div key={index} className="container ">
             {/* <img src={logo} alt='logo' /> */}
             <Image 
-              src={logo2}
+              src={logo}
               alt="obshtini"
               width={100}
               height={100}
-              className=''
+              className='flex mx-auto'
             />
+            <h1 className='text-center font-osw text-dgreen'>{logo.title}</h1>
           </div>
+          
         ))}
+        
       </Slider>
-    </div>
 
-    <div className='hidden md:block mx-96 p-8  bg-white border-x-4 border-b-4 rounded-br-3xl rounded-bl-3xl border-dgreen'>
-      <Slider {...settings} className="">
+      {/* Desktop slider 2 */}
+
+      <Slider {...settings} className="my-8">
         {logoz.map((logo, index) => (
           <div key={index} className="container ">
             {/* <img src={logo} alt='logo' /> */}
@@ -102,15 +430,42 @@ const LogoSlider = () => {
               alt="obshtini"
               width={100}
               height={100}
-              className=''
+              className='flex mx-auto'
             />
+            <h1 className='text-center font-osw text-dgreen'>{logo.title}</h1>
           </div>
+          
         ))}
+        
+      </Slider>
+
+      {/* Desktop slider 3 */}
+
+      <Slider {...settings} className="my-8">
+        {logox.map((logo, index) => (
+          <div key={index} className="container ">
+            {/* <img src={logo} alt='logo' /> */}
+            <Image 
+              src={logo}
+              alt="obshtini"
+              width={100}
+              height={100}
+              className='flex mx-auto'
+            />
+            <h1 className='text-center font-osw text-dgreen'>{logo.title}</h1>
+          </div>
+          
+        ))}
+        
       </Slider>
     </div>
 
+    
 
 
+
+
+{/* Phone slider 1 */}
     <div className="block md:hidden mx-4 flex-col items-center justify-center text-center bg-lgreen py-4 rounded-tl-3xl rounded-tr-3xl border-t-4 border-x-4 border-dgreen">
       <h2 className="text-2xl xl:text-4xl font-osw text-dgreen my-4  ">Общини</h2>
       <div className="flex flex-wrap justify-center">
@@ -124,16 +479,19 @@ const LogoSlider = () => {
               alt={`asd`}
               width={200}
               height={200}
-              className=''
+              className='flex mx-auto'
             />
+             <h1 className='text-center font-osw text-dgreen'>{logo.title}</h1>
           </div>
         ))}
       </div>
     </div>
 
+{/* Phone slider 2 */}
+
     <div className="block md:hidden mx-4 flex-col items-center justify-center text-center py-4 bg-white border-x-4 border-b-4 rounded-br-3xl rounded-bl-3xl border-dgreen">
       <div className="flex flex-wrap justify-center">
-        {logos.map((logo, index) => (
+        {logoz.map((logo, index) => (
           <div
             key={index}
             className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 p-4 hover:scale-125 transition-transform duration-300 transform"
@@ -143,8 +501,31 @@ const LogoSlider = () => {
               alt={`asd`}
               width={200}
               height={200}
-              className=''
+              className='flex mx-auto'
             />
+            <h1 className='text-center font-osw text-dgreen'>{logo.title}</h1>
+          </div>
+        ))}
+      </div>
+    </div>
+
+{/* Phone slider 3 */}
+    <div className="block md:hidden mx-4 flex-col items-center justify-center text-center bg-lgreen py-4 rounded-tl-3xl rounded-tr-3xl border-t-4 border-x-4 border-dgreen">
+      <h2 className="text-2xl xl:text-4xl font-osw text-dgreen my-4  ">Общини</h2>
+      <div className="flex flex-wrap justify-center">
+        {logox.map((logo, index) => (
+          <div
+            key={index}
+            className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 p-4 hover:scale-125 transition-transform duration-300 transform"
+          >
+            <Image
+              src={logo}
+              alt={`asd`}
+              width={200}
+              height={200}
+              className='flex mx-auto'
+            />
+            <h1 className='text-center font-osw text-dgreen'>{logo.title}</h1>
           </div>
         ))}
       </div>

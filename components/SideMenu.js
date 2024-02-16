@@ -66,7 +66,7 @@ const handleCityClick = (cityName) => {
     {uniqueCityNames.map((cityName, index) => (
       <li key={index} className=" pl-16 py-2 border-white border  w-full">
         <div
-          className="flex items-center font-bold cursor-pointer hover:text-green-400 text-dgreen dark:text-gray-300"
+          className="flex items-center font-bold cursor-pointer hover:text-black text-dgreen dark:text-gray-300"
           onClick={() => handleCityClick(cityName)}
           onTouchStart={() => handleCityClick(cityName)}
            >

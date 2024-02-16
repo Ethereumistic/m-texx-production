@@ -92,7 +92,11 @@ const MarkerGrid = ({ markers }) => {
                           2xl:translate-y-0
                           -ml-4
                           sm:ml-0
-                          text-lgreen'
+                          text-lgreen
+                          cursor-pointer
+                          hover:scale-110
+                          transition
+                          duration-300'
               onClick={() => {
                 copyToClipboard(location.popUp);
               }}
@@ -118,7 +122,13 @@ const MarkerGrid = ({ markers }) => {
                           lg:-translate-x-2
                           xl:-translate-x-2
                           2xl:-translate-x-4
-                          justify-center p-2 rounded-lg bg-lgreen dark:lgreen mb-2 text-center transition ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'animate-ping' : ''}`}
+                          justify-center p-2 rounded-lg 
+                          bg-lgreen dark:lgreen mb-2 
+                          text-center transition 
+                          cursor-pointer
+                          hover:scale-110
+                          duration-300
+                          ${copiedText === `${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}` ? 'animate-ping' : ''}`}
               onClick={() => {
                 copyToClipboard(`${location.popUp}\n ${location.geocode[0]}, ${location.geocode[1]}`);
               }}
@@ -159,6 +169,10 @@ const MarkerGrid = ({ markers }) => {
                           mt-2
                           ml-3
                           text-lgreen
+                          cursor-pointer
+                          hover:scale-110
+                          transition
+                          duration-300
                           '
               onClick={() => {
                 copyToClipboard(`${location.geocode[0]}, ${location.geocode[1]}`);
@@ -175,11 +189,12 @@ const MarkerGrid = ({ markers }) => {
         </div>
       ))}
 
-{showPopup && (
-  <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-200 dark:bg-dgreen py-1 px-4 rounded-lg shadow-lg animate-fade-out">
+{/* {showPopup && (
+  <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 bg-gray-200 dark:bg-dgreen py-1 px-4 rounded-lg shadow-lg animate-fade-out">
     <p className="text-sm dark:text-gray-300">Копирано!</p>
   </div>
-)}
+)} */}
+
 
     </div>
     </div>

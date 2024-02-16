@@ -36,7 +36,7 @@ export default function DesktopMap({  }) {
           <Marker key={index} position={marker.geocode} icon={customIcon}>
             <Popup>
   <div>
-    <p>{marker.city}</p>
+    <p >{marker.city}</p>
     <p>{marker.popUp}</p>
     <p>
 {marker.geocode[0].toFixed(6)} {marker.geocode[1].toFixed(6)}
