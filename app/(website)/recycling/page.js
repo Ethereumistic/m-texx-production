@@ -73,7 +73,8 @@ const Recycling = () => {
                     /> 
     </div>
 
-    <Technology image={image} leftText={leftText} rightText={rightText}/>            
+    <Technology image={image} leftText={leftText} rightText={rightText}/>
+
     </div>
   );
 };
