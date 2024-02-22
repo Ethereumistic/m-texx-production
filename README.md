@@ -1,14 +1,14 @@
-# Stablo Blog Template - Next.js & Sanity CMS
+# M-Texx Template - Next.js & Sanity CMS
 
-Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS by [Web3Templates](https://web3templates.com/). It comes with free & pro version.
+M-Texx is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS by [Victor Badjarov](https://m-texx.com/).
 
 ## [Installation ↓](#installation)
 
 ## Live Demo
 
-**[Free Version Demo →](https://stablo.web3templates.com/)**
+**[Free Version Demo →](https://m-texx.com/)**
 
-**[Pro Version Demo →](https://stablo-pro.web3templates.com/)**
+**[Pro Version Demo →](https://m-texx.com/)**
 
 ## Features
 
@@ -40,9 +40,9 @@ Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS
 | License         | GPL-2.0 | Commercial |
 | &nbsp; | &nbsp;| &nbsp;|
 | Pricing| Free|**$49**|
-| &nbsp; | [Deploy for free](https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx) | [Purchase Pro](https://web3templates.com/templates/stablo-minimal-blog-website-template) |
+| &nbsp; | [Deploy for free](https://m-texx.com) | [Purchase Pro](https://m-texx.com/) |
 
-<a href="https://web3templates.com/templates/stablo-minimal-blog-website-template">
+<a href="https://m-texx.com">
 <img width="160" alt="Upgrade to Pro" src="https://user-images.githubusercontent.com/1884712/199181300-37c2128e-d033-4145-a906-16fa5263a53b.png">
 </a>
 
@@ -50,7 +50,7 @@ Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS
 
 #### Template Preview
 
-[![Next.js Front-end Preview](https://user-images.githubusercontent.com/1884712/169838344-e32b7426-621a-45a4-aba8-afedf3377e1f.jpeg)](https://web3templates.com/preview/stablo)
+[![Next.js Front-end Preview](https://user-images.githubusercontent.com/1884712/169838344-e32b7426-621a-45a4-aba8-afedf3377e1f.jpeg)](https://m-texx.com/)
 
 #### Sanity CMS Preview
 
@@ -62,7 +62,7 @@ Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS
 
 Use the Deploy Button below. It will let you deploy the starter using Vercel as well as connect it to your Sanity Studio using the Sanity Vercel Integration.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx)
+[![Deploy with Vercel](https://m-texx.com/)](https://m-texx.com)
 
 **The above deploy will automatically configure the following:**
 
@@ -198,4 +198,4 @@ Something's not working as expected? Raise a github issue. If you need personali
 
 ## Sponsor
 
-<a href="https://vercel.com/?utm_source=web3templates&amp;utm_campaign=oss" rel="nofollow"><img src="https://camo.githubusercontent.com/37b009b52b3a9af7886f52e75cd76d1b32fef331ab1dc2108089c0ced0b7635f/68747470733a2f2f7777772e6461746f636d732d6173736574732e636f6d2f33313034392f313631383938333239372d706f77657265642d62792d76657263656c2e737667" alt="image" style="max-width: 70%;"></a>
+<a href="https://m-texx.com" rel="nofollow"><img src="https://camo.githubusercontent.com/37b009b52b3a9af7886f52e75cd76d1b32fef331ab1dc2108089c0ced0b7635f/68747470733a2f2f7777772e6461746f636d732d6173736574732e636f6d2f33313034392f313631383938333239372d706f77657265642d62792d76657263656c2e737667" alt="image" style="max-width: 70%;"></a>
