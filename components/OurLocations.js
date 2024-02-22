@@ -22,7 +22,7 @@ const OurLocations = () => {
   
   <div className="flex flex-wrap justify-center">
   <Link href="/locations">
-    <div className="flex flex-col w-[400px] pr-12 py-16 text-right text-white dark:text-dgreen mb-2 hover:scale-110 transition duration-300">
+    <div className="flex flex-col w-[400px] pr-12 py-16 text-right text-white dark:text-dgreen mb-2 hover:scale-110 transition duration-300 md:translate-x-0 translate-x-5">
       <h3 className="text-xl font-russo mb-2">
         Текстилни контейнери, които не само са лесни за употреба, 
         но и се отличават със свежи зелени цветове, лесни за разпознаване. 
@@ -30,7 +30,7 @@ const OurLocations = () => {
         на събраните текстилни изделия от външни атмосферни влияния.
       </h3>      
       
-      <button className='flex border-2 text-lg font-russo border-lgreen dark:border-dgreen dark:hover:bg-dgreen hover:bg-lgreen dark:hover:text-white hover:text-dgreen transition duration-300 rounded-full mx-auto mt-16 py-2 px-8'>Намери локация близо до теб</button>
+      <button className='md:translate-x-0 translate-x-1 flex border-2 text-lg font-russo border-lgreen dark:border-dgreen dark:hover:bg-dgreen hover:bg-lgreen dark:hover:text-white hover:text-dgreen transition duration-300 rounded-full mx-auto mt-16 py-2 px-8'>Намери локация близо до теб</button>
 
     </div>
 </Link>
