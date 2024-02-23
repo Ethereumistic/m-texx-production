@@ -64,7 +64,7 @@ export default function Footer(props) {
             </Link>
           </div>
         
-        <div className="flex mx-auto justify-end text-4xl">
+        <div className="flex mx-auto justify-end">
         <ThemeSwitch />
         </div>
       {/* <Backlink /> */}
