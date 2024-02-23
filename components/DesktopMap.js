@@ -11,7 +11,7 @@ import MarkerClusterGroup from 'react-leaflet-cluster';
 const markers = require('@/components/markers');
 
 const customIcon = new Icon({
-    iconUrl: "https://cdn.discordapp.com/attachments/1017047163324346420/1138806234468843570/location.png",
+    iconUrl: "https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/locations/pin.png",
     iconSize: [34, 34]
   })
 
