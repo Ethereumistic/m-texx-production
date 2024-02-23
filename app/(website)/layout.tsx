@@ -26,7 +26,7 @@ export async function sharedMetaData(params) {
         {
           url:
             urlForImage(settings?.openGraphImage)?.src ||
-            "/img/opengraph.jpg",
+            "/img/opengraph.png",
           width: 800,
           height: 600
         }

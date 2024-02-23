@@ -38,8 +38,8 @@ export default function Layout(props) {
           site_name: props.title
         }}
         twitter={{
-          handle: "@surjithctly",
-          site: "@surjithctly",
+          handle: "@VBadjarov",
+          site: "@VBadjarov",
           cardType: "summary_large_image"
         }}
       />
