@@ -14,12 +14,12 @@ import Link from "next/link";
 export default function Footer(props) {
   return (
     <Container className="mt-10 border-t border-gray-100 dark:border-gray-800">
-      <div className="text-center text-sm text-dgreen dark:text-lgreen">
+      <div className="text-center text-sm text-dgreen dark:text-lgreen mb-4">
         Copyright © {new Date().getFullYear()} {props?.copyright}. All
         rights reserved.
       </div>
       <div className="mt-1 flex justify-center gap-1 text-center text-sm text-gray-500 dark:text-gray-600">
-        <span className="text-dgreen dark:text-white">
+        <span className="text-dgreen dark:text-white px-4 hover:scale-125 transition duration-300">
           {" "}
           Made by{" "}
           <Link
@@ -30,7 +30,7 @@ export default function Footer(props) {
           </Link>
         </span>
         <span>&middot;</span>
-        <span className="text-dgreen dark:text-white">
+        <span className="text-dgreen dark:text-white px-4 hover:scale-125 transition duration-300">
           {" "}
           <Link
             href="https://m-texx.com/"
@@ -39,6 +39,27 @@ export default function Footer(props) {
             Website
           </Link>
         </span>
+
+        <span className="text-dgreen dark:text-white px-4 hover:scale-125 transition duration-300">
+          {" "}
+          <Link
+            href="/cookies"
+            rel="noopener"
+            target="_blank">
+            Бисквитки 🍪
+          </Link>
+        </span>
+
+        <span className="text-dgreen dark:text-white px-4 hover:scale-125 transition duration-300">
+          {" "}
+          <Link
+            href="/presentations"
+            rel="noopener"
+            target="_blank">
+            Презентации 📊
+          </Link>
+        </span>
+
       </div>
 
 
