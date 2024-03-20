@@ -10,7 +10,7 @@ import Technology from '@/components/Technology';
 
 const Recycling = () => {
 
-  const image = '/img/economy/economy.png';
+  const image = 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/economy/economy.png';
   const leftText = 'This is the text that will be displayed when the left side of the image is clicked.';
   const rightText = 'This is the text that will be displayed when the right side of the image is clicked.';
 

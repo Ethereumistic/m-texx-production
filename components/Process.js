@@ -5,15 +5,15 @@ import { useState, useEffect } from 'react';
 const Process = () => {
   const CirclePollution = [
     {
-      src: '/img/process/container-mtexx.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/container-mtexx.png',
       title: 'Оставяне на текстил в контейнери',
     },
     {
-      src: '/img/process/collect-mtexx.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/collect-mtexx.png',
       title: 'Събиране на текстила от контейнери',
     },
     {
-      src: '/img/process/sort-mtexx.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/process/sort-mtexx.png',
       title: ' Сортиране на текстил по вид и качество',
     },
 
@@ -126,7 +126,6 @@ const Process = () => {
                 alt={`Image ${index + 1}`}
                 width={200}
                 height={200}
-                layout="fixed"
                 className={`rounded-full cursor-pointer ${
                   activeCircle === index ? 'border-lgreen border-8' : ''
                 } transition-all duration-300`}

@@ -3,17 +3,17 @@ import Image from 'next/image';
 const HowToCards = () => {
   const en = [
     {
-      src: '/img/cards/clothes.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/cards/clothes.png',
       title: 'Съберете чистите си дрехи, обувки и други текстилни изделия в торба.',
       desc: '1 Стъпка',
     },
     {
-      src: '/img/cards/container-bag-en.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/cards/container-bag-bg.png',
       title: 'Издърпайте дръжката максимално надолу и пъхнете торбата на обозначеното място.',
       desc: '2 Стъпка',
     },
     {
-      src: '/img/cards/container-en.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/cards/container-bg.png',
       title: 'Вдигнете дръжката нагоре и я освободете.',
       desc: '3 Стъпка',
     },
@@ -22,17 +22,17 @@ const HowToCards = () => {
 
 const bg = [
     {
-      src: '/img/cards/clothes.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/cards/clothes.png',
       title: 'Дрехи',
       desc: '',
     },
     {
-      src: '/img/cards/container-bag-bg.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/cards/container-bag-bg.png',
       title: 'Обувки',
       desc: '',
     },
     {
-      src: '/img/cards/container-bg.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/cards/container-bg.png',
       title: 'Чанти',
       desc: '',
     },

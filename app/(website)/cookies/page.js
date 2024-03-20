@@ -110,12 +110,12 @@ const Cookies = () => {
           Повече информация за бисквитките и за какво се употребяват, препоръчваме следните линкове:
         
             <ul className='list-none mt-2'>
-            <Link href="https://allaboutcookies.org/" target='blank'>
+            <Link href="https://allaboutcookies.org/" target='_blank'>
                 <li className='py-2 hover:scale-125 transition duration-300'>
                 www.allaboutcookies.org
                 </li>
             </Link> 
-            <Link href="https://youronlinechoices.com/bg" target='blank'>
+            <Link href="https://youronlinechoices.com/bg" target='_blank'>
                 <li className='py-2 hover:scale-125 transition duration-300'>
                 www.youronlinechoices.com/bg
                 </li>

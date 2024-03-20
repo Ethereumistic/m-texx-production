@@ -5,38 +5,38 @@ import { useState, useEffect } from 'react';
 const Pollution = () => {
   const CirclePollution = [
     {
-      src: '/img/pollution/1.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/1.png',
       title: 'ИЗПОЛЗВАНЕ НА ВОДА',
     },
     {
-      src: '/img/pollution/2.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/2.png',
       title: 'ЗАМЪРСЯВАНЕ НА ВОДА',
     },
     {
-      src: '/img/pollution/3.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/3.png',
       title: 'ЕМИСИИ НА ПАРНИКОВИ ГАЗОВЕ',
     },
     {
-      src: '/img/pollution/4.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/4.png',
       title: 'ЗАМЪРСЯВАНЕ НА ДЕПА',
     },
   ];
 
   const HoverPollution = [
     {
-      src: '/img/pollution/water-use-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/water-use-ss.png',
       title: 'СТЪКЛО',
     },
     {
-      src: '/img/pollution/water-pollution-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/water-pollution-ss.png',
       title: 'ХАРТИЯ',
     },
     {
-      src: '/img/pollution/air-pollution-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/air-pollution-ss.png',
       title: 'МЕТАЛ',
     },
     {
-      src: '/img/pollution/landfield-ss.png',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/pollution/landfield-ss.png',
       title: 'БИТОВ ОТПАДЪК',
     },
   ];
@@ -78,7 +78,6 @@ const Pollution = () => {
                 alt={`Image ${index + 1}`}
                 width={200}
                 height={200}
-                layout="fixed"
                 className={`rounded-full ${
                   activeCircle === index ? 'border-lgreen border-8' : ''
                 } transition-all duration-300`}

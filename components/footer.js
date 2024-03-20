@@ -44,8 +44,7 @@ export default function Footer(props) {
           {" "}
           <Link
             href="/cookies"
-            rel="noopener"
-            target="_blank">
+            rel="noopener">
             Бисквитки 🍪
           </Link>
         </span>
@@ -54,8 +53,7 @@ export default function Footer(props) {
           {" "}
           <Link
             href="/presentations"
-            rel="noopener"
-            target="_blank">
+            rel="noopener">
             Презентации 📊
           </Link>
         </span>
