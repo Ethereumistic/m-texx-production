@@ -3,46 +3,46 @@ import Image from 'next/image';
 const Collect = () => {
   const collectY = [
     {
-      src: '/img/collect/clothes.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/clothes.svg',
       title: 'Дрехи',
     },
     {
-      src: '/img/collect/shoes.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/shoes.svg',
       title: 'Обувки',
     },
     {
-      src: '/img/collect/bag.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/bag.svg',
       title: 'Чанти',
     },
     {
-      src: '/img/collect/acc.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/acc.svg',
       title: 'Аксесоари',
     },
     {
-      src: '/img/collect/toy.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/toy.svg',
       title: 'Плюшени играчки',
     },
     {
-      src: '/img/collect/home.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/home.svg',
       title: 'Домакински текстил',
     },
   ];
 
   const collectN = [
     {
-      src: '/img/collect/glass.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/glass.svg',
       title: 'СТЪКЛО',
     },
     {
-      src: '/img/collect/book.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/book.svg',
       title: 'ХАРТИЯ',
     },
     {
-      src: '/img/collect/tin.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/tin.svg',
       title: 'МЕТАЛ',
     },
     {
-      src: '/img/collect/ban.svg',
+      src: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/collect/ban.svg',
       title: 'БИТОВ ОТПАДЪК',
     },
   ];
