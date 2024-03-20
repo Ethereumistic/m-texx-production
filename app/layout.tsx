@@ -47,19 +47,24 @@ const lora = Lora({
   variable: "--font-lora"
 });
 
+
+
+
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
+  showNavbarAndFooter?: boolean;
 }) {
   return (
     <html
       lang="en"
       suppressHydrationWarning
-      className={cx(inter.variable, lora.variable, rubik.variable, russo.variable, osw.variable)}>
+      className={cx(inter.variable, lora.variable, rubik.variable, russo.variable, osw.variable)}
+    >
       <body className="antialiased text-gray-800 dark:bg-dgreen dark:text-gray-400 transition duration-400">
         <main>
-        <Providers>{children}</Providers>
+          <Providers>{children}</Providers>
         </main>
       </body>
     </html>

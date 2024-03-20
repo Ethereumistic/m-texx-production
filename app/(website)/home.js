@@ -10,7 +10,6 @@ import useSWR, { SWRConfig } from "swr";
 import { paginatedquery } from "@/lib/sanity/groq";
 import { fetcher } from "@/lib/sanity/client";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-
 import Collect from "@/components/Collect";
 import CircleSelector from "@/components/CircleSelector";
 import ImgCarousel from "@/components/ImgCarousel";
@@ -69,7 +68,6 @@ export default function Post({ posts: initialposts }) {
 
   return (
     <>
-    
     {/* {posts && (
         <Container>
           <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
@@ -214,7 +212,6 @@ export default function Post({ posts: initialposts }) {
       </Container>
 
       
-        
     </>
   );
 }

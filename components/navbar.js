@@ -1,5 +1,4 @@
 "use client";
-
 import { Fragment } from "react";
 import { Menu, Transition, Disclosure } from "@headlessui/react";
 import Container from "@/components/container";
@@ -21,24 +20,26 @@ export default function Navbar(props) {
 
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const offset = window.scrollY;
-  //     if (offset > 10) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
+
+
 
   const leftmenu = [
     {
@@ -96,36 +97,14 @@ export default function Navbar(props) {
   
 
   return (
-<div className="fixed top-0 z-40 sm:z-50 w-full box-content bg-white dark:bg-dgreen transition duration-400 shadow ">
+<div className={`fixed top-0 z-20 sm:z-30 w-full box-content bg-white dark:bg-dgreen transition duration-400 shadow ${isFullscreen ? 'hidden' : ''}`}>
   <Container className="-mt-2">
     <nav>
         <Disclosure>
           {({ open }) => (
             <>
               <div className="sm:mt-0 mt-4 flex flex-wrap justify-between md:flex-nowrap md:gap-10">
-                {/* <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
 
-                  {leftmenu.map((item, index) => (
-                    <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          {item.label}
-                        </Link>
-                      )}
-                    </Fragment>
-                  ))}
-                </div> */}
                 <div className="flex w-full items-center justify-between md:w-auto ">
                   <Link href="/" className="w-32 dark:hidden">
                     {props.logo ? (

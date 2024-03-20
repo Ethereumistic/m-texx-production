@@ -8,7 +8,7 @@ export async function sharedMetaData(params) {
   const settings = await getSettings();
 
   return {
-    // metadataBase: new URL(settings.url),
+    metadataBase: new URL("https://m-texx.com/"),  //tuka ne sum sig dali nqma da preebem neshto ama shte vidim
     title: {
       default:
         settings?.title ||
@@ -47,15 +47,21 @@ export async function generateMetadata({ params }) {
   return await sharedMetaData(params);
 }
 
-export default async function Layout({ children, params }) {
+export default async function Layout({ children, params,  }) {
   const settings = await getSettings();
+  const currentPath = params?.currentPath || "";
+  const shouldShowNavbarAndFooter = !currentPath.startsWith("/presentations/business");
+
+
   return (
     <>
-      <Navbar {...settings} />
+      {shouldShowNavbarAndFooter && <Navbar {...settings} />}
 
-      <div className="mt-36">{children}</div>
+      <div className={shouldShowNavbarAndFooter ? "mt-36" : ""}>
+        {children}
+      </div>
 
-      <Footer {...settings} />
+      {shouldShowNavbarAndFooter && <Footer {...settings} />}
     </>
   );
 }
