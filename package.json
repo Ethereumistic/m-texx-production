@@ -42,6 +42,7 @@
     "react-iframe": "^1.8.5",
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
+    "react-player": "^2.15.1",
     "react-refractor": "^2.1.7",
     "react-slick": "^0.30.1",
     "sanity": "^3.9.0",
