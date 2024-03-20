@@ -204,6 +204,8 @@ const PresentationB = () => {
           </button>
         </div>
       </div>
+      <div className='w-full h-4 bg-dgreen -translate-y-2'></div>
+
       <div className="mx-auto mt-8 bottom-0 left-0 flex items-center h-full">
       <button onClick={toggleFullscreen} className="text-3xl text-lgreen hover:text-green-500 p-2 focus:outline-none">
               <FaExpandAlt />

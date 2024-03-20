@@ -10,7 +10,8 @@ const ImgCarousel = () => {
 
   return (
     <>
-<div class="z-50 -translate-y-[142px]">
+<div class="z-50 -translate-y-[144px]">
+
         <PresentationB />
     </div>
     </>
