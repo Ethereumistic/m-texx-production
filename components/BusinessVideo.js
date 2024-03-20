@@ -20,7 +20,7 @@ const BusinessVideo = () => {
         pip={true}
       />
       <source src={videosrc} type="video/mp4" />
-      asd
+      
     </div>
   );
 };
