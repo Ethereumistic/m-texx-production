@@ -6,7 +6,7 @@ const OurLocations = () => {
 
     const locationsTheme = [
       {
-        src: theme === 'dark' ? '/img/ourlocations/map.svg' : '/img/ourlocations/map.svg',
+        src: theme === 'dark' ? 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/locations/map.svg' : 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/locations/map.svg',
         title: '400+',
       },
     ];
@@ -45,7 +45,7 @@ const OurLocations = () => {
     </Link>
     <Link href="/locations">
       <Image
-        src={`/img/ourlocations/container-bg-plain.png`}
+        src={`https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/locations/container-bg-plain.png`}
         alt={`test`}
         width={500}
         height={420}

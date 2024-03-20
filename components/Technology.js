@@ -22,7 +22,7 @@ const Technology = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen my-8">
       <Image
-        src="/img/technology/tech.png" // Update with your image path
+        src="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/technology/tech.png" // Update with your image path
         alt="Economy Image"
         width={1300}
         height={500} // Adjust the height as needed

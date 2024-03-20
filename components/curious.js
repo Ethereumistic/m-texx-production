@@ -7,9 +7,9 @@ import { PiPantsFill } from 'react-icons/pi';
 
 const Curious = () => {
   const CirclePollution = [
-    { icon: <IoShirt className='text-lgreen' size={48} />, title: 'ТЕНИСКА', photoSrc: '/img/curious/1-shirt.png', desc: 'ЗНАЕТЕ ЛИ КОЛКО ЛИТРА ВОДА СА НЕОБХОДИМИ ЗА ПРОИЗВОДСТВОТО НА ЕДНА ТЕНИСКА?' },
-    { icon: <PiPantsFill className='text-lgreen' size={48} />, title: 'ДЪНКИ', photoSrc: '/img/curious/1-jeans.png', desc: 'ЗНАЕТЕ ЛИ КОЛКО ЛИТРА ВОДА СА НЕОБХОДИМИ ЗА ПРОИЗВОДСТВОТО НА ЕДНИ ДЪНКИ?' },
-    { icon: <GiAbstract040 className='text-lgreen ' size={48} />, title: 'ПЛАСТМАСА', photoSrc: '/img/curious/microplastic-ss.png', desc: 'ЗНАЕТЕ ЛИ ОТ КЪДЕ ИДВАТ ПЛАСТМАСОВИТЕ МИКРОЧАСТИЦИ В ПРИРОДАТА?' },
+    { icon: <IoShirt className='text-lgreen' size={48} />, title: 'ТЕНИСКА', photoSrc: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/curious/1-shirt.png', desc: 'ЗНАЕТЕ ЛИ КОЛКО ЛИТРА ВОДА СА НЕОБХОДИМИ ЗА ПРОИЗВОДСТВОТО НА ЕДНА ТЕНИСКА?' },
+    { icon: <PiPantsFill className='text-lgreen' size={48} />, title: 'ДЪНКИ', photoSrc: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/curious/1-jeans.png', desc: 'ЗНАЕТЕ ЛИ КОЛКО ЛИТРА ВОДА СА НЕОБХОДИМИ ЗА ПРОИЗВОДСТВОТО НА ЕДНИ ДЪНКИ?' },
+    { icon: <GiAbstract040 className='text-lgreen ' size={48} />, title: 'ПЛАСТМАСА', photoSrc: 'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/curious/microplastic-ss.png', desc: 'ЗНАЕТЕ ЛИ ОТ КЪДЕ ИДВАТ ПЛАСТМАСОВИТЕ МИКРОЧАСТИЦИ В ПРИРОДАТА?' },
   ];
 
   const [activeCircle, setActiveCircle] = useState(0);
