@@ -6,7 +6,7 @@ import PresentationB from "@/components/PresentationB"
 import BusinessVideo from '@/components/BusinessVideo';
 
 
-const ImgCarousel = () => {
+const Business = () => {
 
 
   return (
@@ -23,4 +23,4 @@ const ImgCarousel = () => {
   );
 };
 
-export default ImgCarousel;
+export default Business;
