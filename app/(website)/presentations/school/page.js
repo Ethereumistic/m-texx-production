@@ -1,6 +1,6 @@
 import React from 'react';
 import PresentationS from '@/components/PresentationS';
-import BusinessVideo from '@/components/BusinessVideo';
+import SchoolVideo from '@/components/SchoolVideo';
 
 const School = () => {
 
@@ -10,7 +10,7 @@ const School = () => {
       
       <PresentationS />
       <div className='mt-8'>
-      <BusinessVideo />
+      <SchoolVideo />
       </div>
     </div>
   );
