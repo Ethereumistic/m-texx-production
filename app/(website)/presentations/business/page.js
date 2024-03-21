@@ -1,7 +1,4 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import Image from 'next/image';
+import React from 'react';
 import PresentationB from "@/components/PresentationB"
 import BusinessVideo from '@/components/BusinessVideo';
 
@@ -17,8 +14,10 @@ const Business = () => {
 
         <div className='mt-8'>
           <BusinessVideo />
-          .
+          
         </div>
+
+
     </div>
     </>
   );

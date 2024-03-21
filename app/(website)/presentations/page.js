@@ -1,12 +1,4 @@
-"use client";
 import React from 'react';
-import Image from 'next/image';
-import { FaLightbulb } from 'react-icons/fa';
-import Pollution from '@/components/pollution';
-import Curious from '@/components/curious';
-import Economy from '@/components/Economy';
-import Process from '@/components/Process';
-import Technology from '@/components/Technology';
 import Link from 'next/link';
 
 const Presentations = () => {

@@ -7,13 +7,13 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-const logos = [
+const slides = [
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/1.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/2.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/3.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/4.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/5.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/6.png',
+  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/6n.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/7.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/8.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/9.png',
@@ -21,7 +21,7 @@ const logos = [
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/11.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/12.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/13.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/14.png',
+  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/14n.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/15.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/16.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business/17.png',
@@ -82,7 +82,7 @@ const PresentationS = () => {
         <>
 
             <Slider {...settings} className="overflow-x-hidden ">
-        {logos.map((logo2, index) => (
+        {slides.map((logo2, index) => (
           <div key={index} className=" ">
             <Image 
               src={logo2}
