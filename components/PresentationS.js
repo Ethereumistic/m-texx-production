@@ -14,7 +14,7 @@ const slides = [
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/3.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/4.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/5.png',
-  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/6.png',
+  'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/6n.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/7.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/8.png',
   'https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/school/9.png',
