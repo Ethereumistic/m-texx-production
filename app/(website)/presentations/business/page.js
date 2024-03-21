@@ -17,6 +17,7 @@ const Business = () => {
 
         <div className='mt-8'>
           <BusinessVideo />
+          .
         </div>
     </div>
     </>
