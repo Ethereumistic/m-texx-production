@@ -49,19 +49,18 @@ export async function generateMetadata({ params }) {
 
 export default async function Layout({ children, params,  }) {
   const settings = await getSettings();
-  const currentPath = params?.currentPath || "";
-  const shouldShowNavbarAndFooter = !currentPath.startsWith("/presentations/business");
+
 
 
   return (
     <>
-      {shouldShowNavbarAndFooter && <Navbar {...settings} />}
+      <Navbar {...settings} />
 
-      <div className={shouldShowNavbarAndFooter ? "mt-36" : ""}>
+      <div className="mt-36">
         {children}
       </div>
 
-      {shouldShowNavbarAndFooter && <Footer {...settings} />}
+      <Footer {...settings} />
     </>
   );
 }
