@@ -46,8 +46,7 @@ export default function Footer(props) {
         <span className="text-dgreen dark:text-white px-4 hover:scale-125 transition duration-300">
           {" "}
           <Link
-            href="/cookies"
-            rel="noopener">
+            href="/cookies">
             Бисквитки 🍪
           </Link>
         </span>
@@ -55,8 +54,7 @@ export default function Footer(props) {
         <span className="text-dgreen dark:text-white px-4 hover:scale-125 transition duration-300">
           {" "}
           <Link
-            href="/presentations"
-            rel="noopener">
+            href="/presentations">
             Презентации 📊
           </Link>
         </span>
@@ -66,22 +64,22 @@ export default function Footer(props) {
 
           <div className="text-3xl flex mx-auto justify-center my-4">
             <Link href="https://www.facebook.com/mtexxtextile"
-                  target="_blank">
+                  target="_blank" rel="noopener">
             <FaFacebook className="mx-4 text-dgreen dark:text-lgreen hover:scale-125 transition duration-300" />
             </Link>
 
             <Link href="https://www.instagram.com/mtexx_recycling/"
-                  target="_blank">
+                  target="_blank" rel="noopener">
             <FaInstagram className="mx-4 text-dgreen dark:text-lgreen hover:scale-125 transition duration-300" />
             </Link>
 
             {/* <Link href="https://www.youtube.com/watch?v=-XT9GojBiqA"
-                  target="_blank">
+                  target="_blank" rel="noopener">
             <FaYoutube className="mx-4 text-dgreen dark:text-lgreen hover:scale-125 transition duration-300" />
             </Link> */}
 
             <Link href="https://www.tiktok.com/@mtexx_recycling"
-                  target="_blank">
+                  target="_blank" rel="noopener">
             <FaTiktok className="mx-4 text-dgreen dark:text-lgreen hover:scale-125 transition duration-300" />
             </Link>
           </div>

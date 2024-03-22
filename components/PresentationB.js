@@ -106,7 +106,7 @@ const PresentationB = () => {
                         Изтегли <FaFileDownload className='ml-4'/>
                     </button>
                 </a>
-                <a target='_blank' href="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business//business-presentation_compressed.pdf" download="business-presentation.pdf">
+                <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/presentations/business//business-presentation_compressed.pdf" download="business-presentation.pdf">
                     <button className="hover:scale-110 transition duration-300 font-russo bg-dgreen dark:bg-lgreen rounded-xl text-3xl text-white dark:text-dgreen  hover:text-lgreen p-2 focus:outline-none flex">
                         Отвори презентацията в нов прозорец <GrNewWindow  className='ml-4'/>
                     </button>
